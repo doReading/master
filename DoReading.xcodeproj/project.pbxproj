@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2012196E1BDDC00A0052ED19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2012196D1BDDC00A0052ED19 /* main.m */; };
-		201219711BDDC00A0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219701BDDC00A0052ED19 /* AppDelegate.m */; };
-		201219741BDDC00A0052ED19 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219731BDDC00A0052ED19 /* RootViewController.m */; };
 		201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201219781BDDC00A0052ED19 /* Assets.xcassets */; };
 		201219871BDDC00A0052ED19 /* DoReadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219861BDDC00A0052ED19 /* DoReadingTests.m */; };
 		201219921BDDC00A0052ED19 /* DoReadingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219911BDDC00A0052ED19 /* DoReadingUITests.m */; };
+		201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219A21BDDD06F0052ED19 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		201219AC1BDDD1970052ED19 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219AB1BDDD1970052ED19 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C4197B634E31EE63968D793D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2926C76896EC5C379D0A55 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -37,19 +37,19 @@
 		0F8AD86294916847D3413D33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		201219691BDDC00A0052ED19 /* DoReading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoReading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2012196D1BDDC00A0052ED19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2012196F1BDDC00A0052ED19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		201219701BDDC00A0052ED19 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		201219721BDDC00A0052ED19 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		201219731BDDC00A0052ED19 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		201219781BDDC00A0052ED19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2012197D1BDDC00A0052ED19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201219821BDDC00A0052ED19 /* DoReadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoReadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201219861BDDC00A0052ED19 /* DoReadingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoReadingTests.m; sourceTree = "<group>"; };
 		201219881BDDC00A0052ED19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2012198D1BDDC00A0052ED19 /* DoReadingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoReadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201219911BDDC00A0052ED19 /* DoReadingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoReadingUITests.m; sourceTree = "<group>"; };
 		201219931BDDC00A0052ED19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2012199F1BDDC44A0052ED19 /* DR-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DR-Prefix.pch"; sourceTree = "<group>"; };
+		201219A11BDDD06F0052ED19 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		201219A21BDDD06F0052ED19 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		201219A61BDDD0C00052ED19 /* DR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DR-Prefix.pch"; sourceTree = "<group>"; };
+		201219AA1BDDD1970052ED19 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		201219AB1BDDD1970052ED19 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		201219AD1BDDD4970052ED19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F2926C76896EC5C379D0A55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E78644EEDBF86FF4D538EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,13 +122,9 @@
 		2012196B1BDDC00A0052ED19 /* DoReading */ = {
 			isa = PBXGroup;
 			children = (
-				2012196F1BDDC00A0052ED19 /* AppDelegate.h */,
-				201219701BDDC00A0052ED19 /* AppDelegate.m */,
-				201219721BDDC00A0052ED19 /* RootViewController.h */,
-				201219731BDDC00A0052ED19 /* RootViewController.m */,
-				2012199F1BDDC44A0052ED19 /* DR-Prefix.pch */,
+				201219A01BDDD0400052ED19 /* Application */,
+				201219A81BDDD1560052ED19 /* Modules */,
 				201219781BDDC00A0052ED19 /* Assets.xcassets */,
-				2012197D1BDDC00A0052ED19 /* Info.plist */,
 				2012196C1BDDC00A0052ED19 /* Supporting Files */,
 			);
 			path = DoReading;
@@ -158,6 +154,42 @@
 				201219931BDDC00A0052ED19 /* Info.plist */,
 			);
 			path = DoReadingUITests;
+			sourceTree = "<group>";
+		};
+		201219A01BDDD0400052ED19 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				201219A11BDDD06F0052ED19 /* AppDelegate.h */,
+				201219A21BDDD06F0052ED19 /* AppDelegate.m */,
+				201219A61BDDD0C00052ED19 /* DR-Prefix.pch */,
+				201219A41BDDD0C00052ED19 /* Configuration */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		201219A41BDDD0C00052ED19 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				201219AD1BDDD4970052ED19 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		201219A81BDDD1560052ED19 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				201219A91BDDD1970052ED19 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		201219A91BDDD1970052ED19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				201219AA1BDDD1970052ED19 /* RootViewController.h */,
+				201219AB1BDDD1970052ED19 /* RootViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,9 +356,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201219741BDDC00A0052ED19 /* RootViewController.m in Sources */,
-				201219711BDDC00A0052ED19 /* AppDelegate.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
+				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
+				201219AC1BDDD1970052ED19 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,9 +480,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/DR-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Application/DR-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = DoReading/Info.plist;
+				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ForHappy.DoReading;
@@ -464,9 +496,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/DR-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Application/DR-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = DoReading/Info.plist;
+				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ForHappy.DoReading;
