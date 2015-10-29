@@ -10,7 +10,11 @@
 #define DR_Prefix_pch
 
 #ifdef __OBJC__
+
 #import <Masonry.h>
+#import <AFNetworking.h>
+#import <DRLibrary.h>
+
 #endif
 
 #endif /* DR_Prefix_pch */
