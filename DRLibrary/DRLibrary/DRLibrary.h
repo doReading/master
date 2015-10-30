@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CFileHandle.h"
+#import "NSString+grep.h"
 
 @interface DRLibrary : NSObject
 

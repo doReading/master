@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		203A4AED1BE2291600DB6F4E /* DRLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A4AEC1BE2291600DB6F4E /* DRLibrary.m */; };
 		203A4AF61BE2297300DB6F4E /* CFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A4AF51BE2294A00DB6F4E /* CFileHandle.m */; };
+		20B09E6E1BE348EF00EE7558 /* NSString+grep.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B09E6D1BE348A200EE7558 /* NSString+grep.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,8 @@
 		203A4AEC1BE2291600DB6F4E /* DRLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRLibrary.m; sourceTree = "<group>"; };
 		203A4AF41BE2294A00DB6F4E /* CFileHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFileHandle.h; sourceTree = "<group>"; };
 		203A4AF51BE2294A00DB6F4E /* CFileHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFileHandle.m; sourceTree = "<group>"; };
+		20B09E6C1BE348A200EE7558 /* NSString+grep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+grep.h"; sourceTree = "<group>"; };
+		20B09E6D1BE348A200EE7558 /* NSString+grep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+grep.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 				203A4AEA1BE2291600DB6F4E /* DRLibrary.h */,
 				203A4AEC1BE2291600DB6F4E /* DRLibrary.m */,
 				203A4AF31BE2294A00DB6F4E /* CFileHandle */,
+				20B09E6B1BE348A200EE7558 /* NSStringCategory */,
 			);
 			path = DRLibrary;
 			sourceTree = "<group>";
@@ -63,6 +67,15 @@
 				203A4AF51BE2294A00DB6F4E /* CFileHandle.m */,
 			);
 			path = CFileHandle;
+			sourceTree = "<group>";
+		};
+		20B09E6B1BE348A200EE7558 /* NSStringCategory */ = {
+			isa = PBXGroup;
+			children = (
+				20B09E6C1BE348A200EE7558 /* NSString+grep.h */,
+				20B09E6D1BE348A200EE7558 /* NSString+grep.m */,
+			);
+			path = NSStringCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B09E6E1BE348EF00EE7558 /* NSString+grep.m in Sources */,
 				203A4AF61BE2297300DB6F4E /* CFileHandle.m in Sources */,
 				203A4AED1BE2291600DB6F4E /* DRLibrary.m in Sources */,
 			);

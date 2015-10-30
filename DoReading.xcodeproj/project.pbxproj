@@ -14,6 +14,10 @@
 		201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219A21BDDD06F0052ED19 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		201219AC1BDDD1970052ED19 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219AB1BDDD1970052ED19 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		203A4AD01BE2115F00DB6F4E /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203A4ACF1BE2115F00DB6F4E /* libDRLibrary.a */; };
+		20B09E801BE354FA00EE7558 /* DownloadLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B09E7B1BE354FA00EE7558 /* DownloadLog.m */; settings = {ASSET_TAGS = (); }; };
+		20B09E811BE354FA00EE7558 /* FileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B09E7D1BE354FA00EE7558 /* FileDownloadManager.m */; settings = {ASSET_TAGS = (); }; };
+		20B09E821BE354FA00EE7558 /* FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B09E7F1BE354FA00EE7558 /* FileDownloadRequest.m */; settings = {ASSET_TAGS = (); }; };
+		20B09E851BE376CF00EE7558 /* DownLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B09E841BE376CF00EE7558 /* DownLogModel.m */; settings = {ASSET_TAGS = (); }; };
 		C4197B634E31EE63968D793D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2926C76896EC5C379D0A55 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,14 @@
 		201219AD1BDDD4970052ED19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203A4ACF1BE2115F00DB6F4E /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "build/Debug-iphoneos/libDRLibrary.a"; sourceTree = "<group>"; };
 		203A4ADD1BE21FBE00DB6F4E /* DRMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMacros.h; sourceTree = "<group>"; };
+		20B09E7A1BE354FA00EE7558 /* DownloadLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadLog.h; sourceTree = "<group>"; };
+		20B09E7B1BE354FA00EE7558 /* DownloadLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadLog.m; sourceTree = "<group>"; };
+		20B09E7C1BE354FA00EE7558 /* FileDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadManager.h; sourceTree = "<group>"; };
+		20B09E7D1BE354FA00EE7558 /* FileDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadManager.m; sourceTree = "<group>"; };
+		20B09E7E1BE354FA00EE7558 /* FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadRequest.h; sourceTree = "<group>"; };
+		20B09E7F1BE354FA00EE7558 /* FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadRequest.m; sourceTree = "<group>"; };
+		20B09E831BE376CF00EE7558 /* DownLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLogModel.h; sourceTree = "<group>"; };
+		20B09E841BE376CF00EE7558 /* DownLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLogModel.m; sourceTree = "<group>"; };
 		3F2926C76896EC5C379D0A55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E78644EEDBF86FF4D538EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,10 +214,26 @@
 		203A4AD91BE2199A00DB6F4E /* ThreeLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				20B09E791BE354FA00EE7558 /* FileDownload */,
 			);
 			name = ThreeLibrary;
 			path = DoReading/ThreeLibrary;
 			sourceTree = SOURCE_ROOT;
+		};
+		20B09E791BE354FA00EE7558 /* FileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				20B09E7C1BE354FA00EE7558 /* FileDownloadManager.h */,
+				20B09E7D1BE354FA00EE7558 /* FileDownloadManager.m */,
+				20B09E7E1BE354FA00EE7558 /* FileDownloadRequest.h */,
+				20B09E7F1BE354FA00EE7558 /* FileDownloadRequest.m */,
+				20B09E7A1BE354FA00EE7558 /* DownloadLog.h */,
+				20B09E7B1BE354FA00EE7558 /* DownloadLog.m */,
+				20B09E831BE376CF00EE7558 /* DownLogModel.h */,
+				20B09E841BE376CF00EE7558 /* DownLogModel.m */,
+			);
+			path = FileDownload;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -372,7 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
+				20B09E851BE376CF00EE7558 /* DownLogModel.m in Sources */,
 				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
+				20B09E801BE354FA00EE7558 /* DownloadLog.m in Sources */,
+				20B09E821BE354FA00EE7558 /* FileDownloadRequest.m in Sources */,
+				20B09E811BE354FA00EE7558 /* FileDownloadManager.m in Sources */,
 				201219AC1BDDD1970052ED19 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
