@@ -18,6 +18,9 @@
 @property (nonatomic, copy, readonly) NSString *downHistoryPath;
 +(instancetype)sharedInstance;
 
+- (NSString *)getCachePathWith:(NSString *)name;
+- (NSString *)getDownPathWith:(NSString *)name;
+
 - (BOOL)addToDownLog:(FileDownloadRequest *)request;
 - (BOOL)addStateToDownLog:(NSString *)fileDownloadPath state:(DownOperationState)state;
 @end

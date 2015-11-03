@@ -12,7 +12,7 @@
 // 超时时间
 #define DEAULT_DOWNLOADER_TIMEOUT 12.f
 // 最大并发数
-#define DEAULT_DOWNLOADER_MAX_CONCURRENT 5
+#define DEAULT_DOWNLOADER_MAX_CONCURRENT 3
 
 
 
@@ -21,10 +21,6 @@
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 @property (nonatomic, strong) NSMutableDictionary *requestQueue;
 @property (nonatomic, strong) NSMutableDictionary *waitingQueue;
-
-//- (void)startFileDownloadRequest:(FileDownloadRequest *)request withURL:(NSURL *)url;
-- (void)finishFileDownloadWithURL:(NSURL *)url;
-- (BOOL)isDownloadingFileWithURL:(NSURL *)url;
 
 @end
 
@@ -127,39 +123,32 @@
                                                                       priority:priority
                                                                       useCache:useCache
                                                                    allowResume:allowResume
-                                                                 progressBlock:^(NSURL *url, CGFloat progress) {
+                                                                 progressBlock:^(NSString *name, CGFloat progress) {
                                                                      if (progresBlock) {
-                                                                         progresBlock(url, progress);
+                                                                         progresBlock(name, progress);
                                                                      }
-                                                                 } completionBlock:^(NSURL *url, NSURL *filePath, BOOL hitCache, NSError *error) {
+                                                                 } completionBlock:^(FileDownloadRequest *request, NSURL *filePath, BOOL hitCache, NSError *error) {
                                                                      //存储到日志：下载完成
-                                                                     [[DownloadLog sharedInstance] addStateToDownLog:filePath.path state:DownOperationFinishedState];
+                                                                     [[DownloadLog sharedInstance] addStateToDownLog:[[filePath absoluteString] getTotalName] state:DownOperationFinishedState];
                                                                      
                                                                      if (completionBlock) {
-                                                                         completionBlock(url, filePath, error);
+                                                                         completionBlock(request, filePath, error);
                                                                      }
                                                                      if (!hitCache) {
-                                                                         [self finishFileDownloadWithURL:url];
+                                                                         [self finishFileDownloadWithName:[[filePath absoluteString] getTotalName]];
                                                                      }
                                                                  }];
-    if (request) {
+    if (request && name.length > 0) {
         // 相同文件的下载请求需排队
-        if ([self isDownloadingFileWithURL:url]) {
-            NSMutableArray *queue = self.waitingQueue[url];
-            if (!queue) {
-                queue = [NSMutableArray array];
-                self.waitingQueue[url] = queue;
-            }
-            [queue addObject:request];
-        } else {
-            [self startFileDownloadRequest:request withURL:url];
-        }
+        name = [self checkDownloadingFile:name];
+        [request setFileDownName:name];
+        [self startFileDownloadRequest:request withName:name];
     }
 }
 
-- (void)startFileDownloadRequest:(FileDownloadRequest *)request withURL:(NSURL *)url
+- (void)startFileDownloadRequest:(FileDownloadRequest *)request withName:(NSString *)name
 {
-    [self.requestQueue setObject:request forKey:url];
+    [self.requestQueue setObject:request forKey:name];
     if (request.operation) {
         [self.operationQueue addOperation:request.operation];
         DownloadLog *downlog = [DownloadLog sharedInstance];
@@ -168,19 +157,19 @@
     }
 }
 
-- (void)finishFileDownloadWithURL:(NSURL *)url
+- (void)finishFileDownloadWithName:(NSString *)name
 {
-    [self.requestQueue removeObjectForKey:url];
-    //
-    NSMutableArray *queue = self.waitingQueue[url];
-    if ([queue count]) {
-        FileDownloadRequest *nextRequest = [queue firstObject];
-        [queue removeObjectAtIndex:0];
-        if (![queue count]) {
-            [self.waitingQueue removeObjectForKey:url];
-        }
-        [self startFileDownloadRequest:nextRequest withURL:url];
-    }
+    [self.requestQueue removeObjectForKey:name];
+// 以后会加入等待队列
+//    NSMutableArray *queue = self.waitingQueue[name];
+//    if ([queue count]) {
+//        FileDownloadRequest *nextRequest = [queue firstObject];
+//        [queue removeObjectAtIndex:0];
+//        if (![queue count]) {
+//            [self.waitingQueue removeObjectForKey:name];
+//        }
+//        [self startFileDownloadRequest:nextRequest withName:name];
+//    }
 }
 
 - (void)cancelDownloadFileWithURL:(NSURL *)url
@@ -191,11 +180,14 @@
     }
 }
 
-- (BOOL)isDownloadingFileWithURL:(NSURL *)url
+#pragma mark - 校验是否有该name文件了
+- (NSString *)checkDownloadingFile:(NSString *)name
 {
-    if (!url) {
-        return NO;
+    if ([CFileHandle containFileAtPath:[[DownloadLog sharedInstance] getDownPathWith:name]]) {
+        name = [[name getName] stringByAppendingFormat:@"*.%@",[name getExtendName]];
+        return [self checkDownloadingFile:name];
+    }else {
+       return name;
     }
-    return (BOOL)[self.requestQueue objectForKey:url];
 }
 @end

@@ -8,7 +8,9 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController ()<UIWebViewDelegate>
+
+@property (nonatomic, strong) NSString *currentRequest;
 
 @end
 
@@ -16,12 +18,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *str = @"http://www.qingkan.net/book/rudaozhisheng/txt.html";
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
+    [self.view addSubview:webView];
+    webView.delegate = self;
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:str]];
+    [webView loadRequest:request];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    self.currentRequest = [[request URL] absoluteString];
+    NSArray *components = [self.currentRequest componentsSeparatedByString:@"/"];
+    if ([components count] > 1 && [(NSString *)components.lastObject isStringForGrep:@"^.+[.]{1}txt$"]) {
+        NSString *fileName = (NSString *)components.lastObject;
+        NSLog(@"fileName = %@",fileName);
+        
+        if([[fileName getExtendName] isEqualToString:@"txt"])
+        {
+            NSURL *url = [NSURL URLWithString:[self.currentRequest stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            DownLoadAlertViewController *alert = [[DownLoadAlertViewController alloc] initWithURL:url useCache:NO allowResume:YES];
+            [alert showIn:self];
+        }
+        return NO;
+    }
+    return YES;
 }
 
 @end

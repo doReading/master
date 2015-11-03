@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "DownloadLog.h"
 
-typedef void (^FileDownloadProgressBlock)(NSURL *url, CGFloat progress);
-typedef void (^FileDownloadCompletionBlock)(NSURL *url, NSURL *filePath, NSError *error);
-typedef void (^FileDownloadCompletionBlock_)(NSURL *url, NSURL *filePath, BOOL hitCache, NSError *error);
+typedef void (^FileDownloadProgressBlock)(NSString *name, CGFloat progress);
+typedef void (^FileDownloadCompletionBlock)(FileDownloadRequest *request, NSURL *filePath, NSError *error);
+typedef void (^FileDownloadCompletionBlock_)(FileDownloadRequest *request, NSURL *filePath, BOOL hitCache, NSError *error);
 
 //
 // 文件下载请求
@@ -43,5 +43,10 @@ typedef void (^FileDownloadCompletionBlock_)(NSURL *url, NSURL *filePath, BOOL h
                                     allowResume:(BOOL)allowResume
                                   progressBlock:(FileDownloadProgressBlock)progresBlock
                                 completionBlock:(FileDownloadCompletionBlock_)completionBlock;
+//设置新的文件名
+- (void)setFileDownName:(NSString *)newName;
+
+//获得下载后的文件名
+- (NSString *)getFileDownName;
 
 @end

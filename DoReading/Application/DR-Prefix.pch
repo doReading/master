@@ -14,16 +14,19 @@
 //加载宏文件
 #import "DRMacros.h"
 
-//加载头文件
-#import <DRLibrary.h>
-
+//通过pods添加的三方库
 #import <Mantle.h>
 #import <EXTKeyPathCoding.h>
 #import <EXTRuntimeExtensions.h>
 #import <EXTScope.h>
-
 #import <AFNetworking.h>
 #import <Masonry.h>
+
+//加载开放性库-DRLibrary
+#import <DRLibrary.h>
+
+//自写公用库
+#import "DownLoadAlertViewController.h"
 
 #endif
 

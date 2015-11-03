@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CFileHandle.h"
 #import "NSString+grep.h"
+#import "UIViewAdditions.h"
 
 @interface DRLibrary : NSObject
 

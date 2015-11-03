@@ -6,7 +6,6 @@
 //  Copyright © 2015年 ForHappy. All rights reserved.
 //
 
-#import "MTLModel.h"
 typedef NS_ENUM(NSInteger, DownOperationState) {
     DownOperationPausedState      = -1,
     DownOperationUnkown           = 0,
@@ -14,7 +13,6 @@ typedef NS_ENUM(NSInteger, DownOperationState) {
     DownOperationExecutingState   = 2,
     DownOperationFinishedState    = 3,
 };
-@class DownLogInfoModel;
 
 @interface DownLogModel : MTLModel<MTLJSONSerializing>
 

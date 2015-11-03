@@ -24,8 +24,7 @@ void * const FileDownloadRequestOperationContext = @"FileDownloadRequestOperatio
 @property (nonatomic, assign) BOOL useCache;
 @property (nonatomic, assign) BOOL allowResume;
 
-- (void)fetchItemFromCacheForURL:(NSURL*)url
-                   progressBlock:(FileDownloadProgressBlock)progressBlock
+- (void)fetchItemFromCacheWithProgressBlock:(FileDownloadProgressBlock)progressBlock
                  completionBlock:(FileDownloadCompletionBlock_)completionBlock;
 
 + (NSURLRequest *)urlRequestWithURL:(NSURL *)url
@@ -59,16 +58,12 @@ void * const FileDownloadRequestOperationContext = @"FileDownloadRequestOperatio
     request.timeout = timeout;
     request.useCache = useCache;
     request.allowResume = allowResume;
-    request.fileCachePath = [downlog.fileDownloaderDirectory stringByAppendingFormat:@"%@.downDR",name];
-    request.fileDownloadPath = [downlog.fileStoreDirectory stringByAppendingString:name];
-    
-    //存储到下载日志
-    [downlog addToDownLog:request];
+    request.fileCachePath = [downlog getCachePathWith:name];
+    request.fileDownloadPath = [downlog getDownPathWith:name];
     
     // 使用如果文件下载
     if (useCache && [self hasCacheForPath:request.fileDownloadPath]) {
-        [request fetchItemFromCacheForURL:url
-                            progressBlock:progresBlock
+        [request fetchItemFromCacheWithProgressBlock:progresBlock
                           completionBlock:completionBlock];
         return nil;
     }
@@ -96,20 +91,37 @@ void * const FileDownloadRequestOperationContext = @"FileDownloadRequestOperatio
         } else {
             progress = (CGFloat)totalBytesRead / (CGFloat)totalBytesExpectedToRead;
         }
-        progresBlock(request.url, progress);
+        progresBlock(request.name, progress);
     }];
     
     [request.operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         @strongify(request);
         [CFileHandle removeFileAtPath:request.fileDownloadPath];
         [CFileHandle moveItemAtPath:request.fileCachePath toPath:request.fileDownloadPath];
-        completionBlock(request.url, [NSURL fileURLWithPath:request.fileDownloadPath], NO, nil);
+        completionBlock(request, [NSURL fileURLWithPath:request.fileDownloadPath], NO, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         @strongify(request);
-        completionBlock(request.url, nil, NO, error);
+        completionBlock(request, nil, NO, error);
     }];
     
     return request;
+}
+
+- (void)setFileDownName:(NSString *)newName
+{
+    self.name = newName;
+    self.fileCachePath = [[DownloadLog sharedInstance] getCachePathWith:newName];
+    self.fileDownloadPath = [[DownloadLog sharedInstance] getDownPathWith:newName];
+    self.operation.outputStream = [NSOutputStream outputStreamToFileAtPath:self.fileCachePath append:YES];
+}
+
+//获得下载后的文件名
+- (NSString *)getFileDownName
+{
+    if (![[self.fileDownloadPath getTotalName] isEqualToString:self.name]){
+        self.name = [self.fileDownloadPath getTotalName];
+    }
+    return self.name;
 }
 
 // KVO
@@ -144,15 +156,18 @@ void * const FileDownloadRequestOperationContext = @"FileDownloadRequestOperatio
 }
 
 // 直接使用已下载文件
-- (void)fetchItemFromCacheForURL:(NSURL*)url
-                   progressBlock:(FileDownloadProgressBlock)progressBlock
+- (void)fetchItemFromCacheWithProgressBlock:(FileDownloadProgressBlock)progressBlock
                  completionBlock:(FileDownloadCompletionBlock_)completionBlock
 {
+    NSString *name = self.name;
+    NSString *fileDownloadPath = self.fileDownloadPath;
+    
+    @weakify(self);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *fileDownloadPath = self.fileDownloadPath;
         dispatch_async(dispatch_get_main_queue(), ^{
-            progressBlock(url, 1.f);
-            completionBlock(url, [NSURL fileURLWithPath:fileDownloadPath], YES, nil);
+            @strongify(self);
+            progressBlock(name, 1.f);
+            completionBlock(self, [NSURL fileURLWithPath:fileDownloadPath], YES, nil);
         });
     });
 }

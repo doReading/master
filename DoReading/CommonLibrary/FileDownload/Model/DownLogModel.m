@@ -13,7 +13,7 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
     return @{
-             @"urlString":@"urlString",
+             @"url":@"url",
              @"fileCachePath":@"fileCachePath",
              @"fileDownloadPath":@"fileDownloadPath",
              @"time":@"time",

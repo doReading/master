@@ -37,10 +37,13 @@
             dict = [NSMutableDictionary dictionary];
         }
         
-        for (NSDictionary *d in dict) {
+        _downLogDict = [NSMutableDictionary dictionary];
+        
+        for (NSString *key in dict.allKeys) {
+            NSDictionary *d = [dict objectForKey:key];
             NSError *error = nil;
             DownLogModel *model = [MTLJSONAdapter modelOfClass:[DownLogModel class] fromJSONDictionary:d error:&error];
-            [_downLogDict setObject:model forKey:model.fileDownloadPath];
+            [_downLogDict setObject:model forKey:key];
         }
         
     }
@@ -87,6 +90,15 @@
     return _fileStoreDirectory;
 }
 
+- (NSString *)getCachePathWith:(NSString *)name
+{
+    return [self.fileDownloaderDirectory stringByAppendingFormat:@"%@.downDR",name];
+}
+
+- (NSString *)getDownPathWith:(NSString *)name
+{
+    return [self.fileStoreDirectory stringByAppendingString:name];
+}
 #pragma mark - 存储信息到日志
 - (BOOL)addToDownLog:(FileDownloadRequest *)request
 {
@@ -103,7 +115,7 @@
         model.state = DownOperationReadyState;
         
         if (model.fileDownloadPath.length > 0) {
-            [self.downLogDict setObject:model forKey:model.fileDownloadPath];
+            [self.downLogDict setObject:model forKey:[request getFileDownName]];
         }
         //存入本地
         [self storeDownLog];
@@ -114,14 +126,14 @@
 }
 
 #pragma mark - 存储状态到日志
-- (BOOL)addStateToDownLog:(NSString *)fileDownloadPath state:(DownOperationState)state
+- (BOOL)addStateToDownLog:(NSString *)name state:(DownOperationState)state
 {
-    if (fileDownloadPath.length > 0) {
-        DownLogModel *model = [self.downLogDict objectForKey:fileDownloadPath];
+    if (name.length > 0) {
+        DownLogModel *model = [self.downLogDict objectForKey:name];
         if (nil != model) {
             model.state = state;
         }else {
-            NSLog(@"error:%@对应模型解析失败",fileDownloadPath);
+            NSLog(@"error:%@对应模型解析失败",name);
         }
         [self storeDownLog];
     }
@@ -133,20 +145,20 @@
 {
     if (self.downLogDict.count > 0) {
         if (self.downHistoryPath.length > 0) {
+            NSMutableDictionary *writeLog = [NSMutableDictionary dictionary];
             for (NSString *key in self.downLogDict.allKeys) {
                 NSError *error = nil;
                 DownLogModel *model = self.downLogDict[key];
                 NSDictionary *dict = [MTLJSONAdapter JSONDictionaryFromModel:model error:&error];
                 if (!error && dict) {
-                    [self.downLogDict setObject:dict forKey:key];
+                    [writeLog setObject:dict forKey:key];
                 }else {
                     NSLog(@"model转化dict-->%@",error);
-                    [self.downLogDict removeObjectForKey:key];
                 }
             }
             
-            if (self.downLogDict.count > 0) {
-                [self.downLogDict writeToURL:[NSURL fileURLWithPath:self.downHistoryPath] atomically:YES];
+            if (writeLog.count > 0) {
+                [writeLog writeToURL:[NSURL fileURLWithPath:self.downHistoryPath] atomically:YES];
                 return YES;
             }
             return NO;
