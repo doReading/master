@@ -24,15 +24,30 @@ PODS:
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
   - Masonry (0.5.3)
+  - ReactiveCocoa (4.0.4-alpha-1):
+    - ReactiveCocoa/UI (= 4.0.4-alpha-1)
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/Core (4.0.4-alpha-1):
+    - ReactiveCocoa/no-arc
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/no-arc (4.0.4-alpha-1):
+    - Result (~> 0.6-beta.1)
+  - ReactiveCocoa/UI (4.0.4-alpha-1):
+    - ReactiveCocoa/Core
+    - Result (~> 0.6-beta.1)
+  - Result (0.6.0-beta.6)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.3.1)
   - Mantle (~> 2.0.5)
   - Masonry (~> 0.5.3)
+  - ReactiveCocoa (~> 4.0.4-alpha-1)
 
 SPEC CHECKSUMS:
   AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
   Masonry: 9f515466afe48632562342a40a1c224071a1a022
+  ReactiveCocoa: 618a2fc13d4ed80e380aa6fa56547cef43c7341d
+  Result: dc390d0b58f9ec43fcd536f1ebdd130803cc6cbc
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

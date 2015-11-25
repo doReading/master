@@ -11,19 +11,23 @@
 
 #ifdef __OBJC__
 
-//加载宏文件
-#import "DRMacros.h"
-
-//通过pods添加的三方库
-#import <Mantle.h>
-#import <EXTKeyPathCoding.h>
-#import <EXTRuntimeExtensions.h>
-#import <EXTScope.h>
-#import <AFNetworking.h>
-#import <Masonry.h>
+#import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 //加载开放性库-DRLibrary
 #import <DRLibrary.h>
+
+//加载基础库
+#import <DRBase.h>
+#import <DRMacros.h>
+
+//通过pods添加的三方库
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import "Masonry.h"
+#import "Mantle.h"
+#import "ReactiveCocoa.h"
+
 
 //自写公用库
 #import "DownLoadAlertViewController.h"

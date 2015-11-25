@@ -5,6 +5,9 @@
       location = "group:DoReading.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DRBase/DRBase.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DRLibrary/DRLibrary.xcodeproj">
    </FileRef>
    <FileRef

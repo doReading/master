@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "DRTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -19,10 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    RootViewController *rootVc = [[RootViewController alloc] init];
+    DRTabBarController *rootVc = [[DRTabBarController alloc] init];
     self.window.rootViewController = rootVc;
     [self.window makeKeyAndVisible];
-    rootVc.view.backgroundColor = [UIColor whiteColor];
+    rootVc.view.backgroundColor = BACK_COLOR_GRAY;
     return YES;
 }
 

@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E53B9B7EF5F355E01861503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E62020796F41A3C4FE0375D /* Pods.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		2012196E1BDDC00A0052ED19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2012196D1BDDC00A0052ED19 /* main.m */; };
 		201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201219781BDDC00A0052ED19 /* Assets.xcassets */; };
 		201219871BDDC00A0052ED19 /* DoReadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219861BDDC00A0052ED19 /* DoReadingTests.m */; };
 		201219921BDDC00A0052ED19 /* DoReadingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219911BDDC00A0052ED19 /* DoReadingUITests.m */; };
 		201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219A21BDDD06F0052ED19 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		201219AC1BDDD1970052ED19 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219AB1BDDD1970052ED19 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
-		201C81E11BE88EF90046E2FA /* DownLoadAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201C81D01BE88D240046E2FA /* DownLoadAlertViewController.m */; };
-		201C81E21BE88EF90046E2FA /* DownloadLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 201C81D31BE88D240046E2FA /* DownloadLog.m */; };
-		201C81E31BE88EF90046E2FA /* FileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 201C81D61BE88D240046E2FA /* FileDownloadManager.m */; };
-		201C81E41BE88EF90046E2FA /* FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 201C81D81BE88D240046E2FA /* FileDownloadRequest.m */; };
-		201C81E51BE88EF90046E2FA /* DownLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 201C81DB1BE88D240046E2FA /* DownLogModel.m */; };
-		203A4AD01BE2115F00DB6F4E /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 203A4ACF1BE2115F00DB6F4E /* libDRLibrary.a */; };
-		C4197B634E31EE63968D793D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2926C76896EC5C379D0A55 /* libPods.a */; };
+		201219AC1BDDD1970052ED19 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219AB1BDDD1970052ED19 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		201DA8911C054E0D00453605 /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8901C054E0D00453605 /* libDRLibrary.a */; };
+		201DA8B71C05601600453605 /* libDRBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8B61C05601600453605 /* libDRBase.a */; };
+		201DA9061C058F7B00453605 /* DRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9051C058F7B00453605 /* DRTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		201DA90A1C0590E100453605 /* GetBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9091C0590E100453605 /* GetBookViewController.m */; settings = {ASSET_TAGS = (); }; };
+		201DA91B1C05B26200453605 /* DownLoadAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA90F1C05B26200453605 /* DownLoadAlertViewController.m */; settings = {ASSET_TAGS = (); }; };
+		201DA91C1C05B26200453605 /* DownloadLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9121C05B26200453605 /* DownloadLog.m */; settings = {ASSET_TAGS = (); }; };
+		201DA91D1C05B26200453605 /* FileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9151C05B26200453605 /* FileDownloadManager.m */; settings = {ASSET_TAGS = (); }; };
+		201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9171C05B26200453605 /* FileDownloadRequest.m */; settings = {ASSET_TAGS = (); }; };
+		201DA91F1C05B26200453605 /* DownLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA91A1C05B26200453605 /* DownLogModel.m */; settings = {ASSET_TAGS = (); }; };
+		201DA9271C05B37800453605 /* BooksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9261C05B37800453605 /* BooksManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E62020796F41A3C4FE0375D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8AD86294916847D3413D33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		201219691BDDC00A0052ED19 /* DoReading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoReading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2012196D1BDDC00A0052ED19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,22 +58,29 @@
 		201219A11BDDD06F0052ED19 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		201219A21BDDD06F0052ED19 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		201219A61BDDD0C00052ED19 /* DR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DR-Prefix.pch"; sourceTree = "<group>"; };
-		201219AA1BDDD1970052ED19 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		201219AB1BDDD1970052ED19 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		201219AA1BDDD1970052ED19 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		201219AB1BDDD1970052ED19 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		201219AD1BDDD4970052ED19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		201C81CF1BE88D240046E2FA /* DownLoadAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadAlertViewController.h; sourceTree = "<group>"; };
-		201C81D01BE88D240046E2FA /* DownLoadAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadAlertViewController.m; sourceTree = "<group>"; };
-		201C81D21BE88D240046E2FA /* DownloadLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadLog.h; sourceTree = "<group>"; };
-		201C81D31BE88D240046E2FA /* DownloadLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadLog.m; sourceTree = "<group>"; };
-		201C81D51BE88D240046E2FA /* FileDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadManager.h; sourceTree = "<group>"; };
-		201C81D61BE88D240046E2FA /* FileDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadManager.m; sourceTree = "<group>"; };
-		201C81D71BE88D240046E2FA /* FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadRequest.h; sourceTree = "<group>"; };
-		201C81D81BE88D240046E2FA /* FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadRequest.m; sourceTree = "<group>"; };
-		201C81DA1BE88D240046E2FA /* DownLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLogModel.h; sourceTree = "<group>"; };
-		201C81DB1BE88D240046E2FA /* DownLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLogModel.m; sourceTree = "<group>"; };
-		203A4ACF1BE2115F00DB6F4E /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "build/Debug-iphoneos/libDRLibrary.a"; sourceTree = "<group>"; };
-		203A4ADD1BE21FBE00DB6F4E /* DRMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRMacros.h; sourceTree = "<group>"; };
-		3F2926C76896EC5C379D0A55 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		201DA8901C054E0D00453605 /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "DRLibrary/build/Debug-iphoneos/libDRLibrary.a"; sourceTree = "<group>"; };
+		201DA89A1C055F2F00453605 /* DRBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBase.h; sourceTree = "<group>"; };
+		201DA89C1C055F2F00453605 /* DRBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBase.m; sourceTree = "<group>"; };
+		201DA8B61C05601600453605 /* libDRBase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRBase.a; path = "DRBase/build/Debug-iphoneos/libDRBase.a"; sourceTree = "<group>"; };
+		201DA9041C058F7B00453605 /* DRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTabBarController.h; sourceTree = "<group>"; };
+		201DA9051C058F7B00453605 /* DRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTabBarController.m; sourceTree = "<group>"; };
+		201DA9081C0590E100453605 /* GetBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBookViewController.h; sourceTree = "<group>"; };
+		201DA9091C0590E100453605 /* GetBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBookViewController.m; sourceTree = "<group>"; };
+		201DA90E1C05B26200453605 /* DownLoadAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadAlertViewController.h; sourceTree = "<group>"; };
+		201DA90F1C05B26200453605 /* DownLoadAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadAlertViewController.m; sourceTree = "<group>"; };
+		201DA9111C05B26200453605 /* DownloadLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadLog.h; sourceTree = "<group>"; };
+		201DA9121C05B26200453605 /* DownloadLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadLog.m; sourceTree = "<group>"; };
+		201DA9141C05B26200453605 /* FileDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadManager.h; sourceTree = "<group>"; };
+		201DA9151C05B26200453605 /* FileDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadManager.m; sourceTree = "<group>"; };
+		201DA9161C05B26200453605 /* FileDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDownloadRequest.h; sourceTree = "<group>"; };
+		201DA9171C05B26200453605 /* FileDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileDownloadRequest.m; sourceTree = "<group>"; };
+		201DA9191C05B26200453605 /* DownLogModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLogModel.h; sourceTree = "<group>"; };
+		201DA91A1C05B26200453605 /* DownLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLogModel.m; sourceTree = "<group>"; };
+		201DA9251C05B37800453605 /* BooksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksManager.h; sourceTree = "<group>"; };
+		201DA9261C05B37800453605 /* BooksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksManager.m; sourceTree = "<group>"; };
 		84E78644EEDBF86FF4D538EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,8 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				203A4AD01BE2115F00DB6F4E /* libDRLibrary.a in Frameworks */,
-				C4197B634E31EE63968D793D /* libPods.a in Frameworks */,
+				201DA8B71C05601600453605 /* libDRBase.a in Frameworks */,
+				201DA8911C054E0D00453605 /* libDRLibrary.a in Frameworks */,
+				1E53B9B7EF5F355E01861503 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +115,9 @@
 		04EE84CA587D6ED3817803DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				203A4ACF1BE2115F00DB6F4E /* libDRLibrary.a */,
-				3F2926C76896EC5C379D0A55 /* libPods.a */,
+				201DA8B61C05601600453605 /* libDRBase.a */,
+				201DA8901C054E0D00453605 /* libDRLibrary.a */,
+				0E62020796F41A3C4FE0375D /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +137,7 @@
 				2012196B1BDDC00A0052ED19 /* DoReading */,
 				201219851BDDC00A0052ED19 /* DoReadingTests */,
 				201219901BDDC00A0052ED19 /* DoReadingUITests */,
+				201DA8991C055F2F00453605 /* DRBase */,
 				2012196A1BDDC00A0052ED19 /* Products */,
 				1EF74BF947FA92E114F18AFB /* Pods */,
 				04EE84CA587D6ED3817803DA /* Frameworks */,
@@ -143,8 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				201219A01BDDD0400052ED19 /* Application */,
+				201DA90B1C05B26200453605 /* SynthesizeCommon */,
 				201219A81BDDD1560052ED19 /* Modules */,
-				201C81CC1BE88D240046E2FA /* CommonLibrary */,
 				201219781BDDC00A0052ED19 /* Assets.xcassets */,
 				2012196C1BDDC00A0052ED19 /* Supporting Files */,
 			);
@@ -183,7 +198,6 @@
 				201219A11BDDD06F0052ED19 /* AppDelegate.h */,
 				201219A21BDDD06F0052ED19 /* AppDelegate.m */,
 				201219A61BDDD0C00052ED19 /* DR-Prefix.pch */,
-				203A4ADD1BE21FBE00DB6F4E /* DRMacros.h */,
 				201219A41BDDD0C00052ED19 /* Configuration */,
 			);
 			path = Application;
@@ -200,7 +214,9 @@
 		201219A81BDDD1560052ED19 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				201DA9031C058F5C00453605 /* TabBarController */,
 				201219A91BDDD1970052ED19 /* Home */,
+				201DA9071C05908300453605 /* GetBook */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -208,68 +224,107 @@
 		201219A91BDDD1970052ED19 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				201219AA1BDDD1970052ED19 /* RootViewController.h */,
-				201219AB1BDDD1970052ED19 /* RootViewController.m */,
+				201219AA1BDDD1970052ED19 /* HomeViewController.h */,
+				201219AB1BDDD1970052ED19 /* HomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		201C81CC1BE88D240046E2FA /* CommonLibrary */ = {
+		201DA8991C055F2F00453605 /* DRBase */ = {
 			isa = PBXGroup;
 			children = (
-				201C81CD1BE88D240046E2FA /* FileDownload */,
+				201DA89A1C055F2F00453605 /* DRBase.h */,
+				201DA89C1C055F2F00453605 /* DRBase.m */,
 			);
-			path = CommonLibrary;
+			path = DRBase;
 			sourceTree = "<group>";
 		};
-		201C81CD1BE88D240046E2FA /* FileDownload */ = {
+		201DA9031C058F5C00453605 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				201C81CE1BE88D240046E2FA /* Controller */,
-				201C81D11BE88D240046E2FA /* DownLoadLog */,
-				201C81D41BE88D240046E2FA /* DownService */,
-				201C81D91BE88D240046E2FA /* Model */,
+				201DA9041C058F7B00453605 /* DRTabBarController.h */,
+				201DA9051C058F7B00453605 /* DRTabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		201DA9071C05908300453605 /* GetBook */ = {
+			isa = PBXGroup;
+			children = (
+				201DA9081C0590E100453605 /* GetBookViewController.h */,
+				201DA9091C0590E100453605 /* GetBookViewController.m */,
+			);
+			name = GetBook;
+			path = DoReading/Modules/GetBook;
+			sourceTree = SOURCE_ROOT;
+		};
+		201DA90B1C05B26200453605 /* SynthesizeCommon */ = {
+			isa = PBXGroup;
+			children = (
+				201DA90C1C05B26200453605 /* FileDownload */,
+				201DA9201C05B2C700453605 /* ReadBookManager */,
+			);
+			path = SynthesizeCommon;
+			sourceTree = "<group>";
+		};
+		201DA90C1C05B26200453605 /* FileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				201DA90D1C05B26200453605 /* Controller */,
+				201DA9101C05B26200453605 /* DownLoadLog */,
+				201DA9131C05B26200453605 /* DownService */,
+				201DA9181C05B26200453605 /* Model */,
 			);
 			path = FileDownload;
 			sourceTree = "<group>";
 		};
-		201C81CE1BE88D240046E2FA /* Controller */ = {
+		201DA90D1C05B26200453605 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				201C81CF1BE88D240046E2FA /* DownLoadAlertViewController.h */,
-				201C81D01BE88D240046E2FA /* DownLoadAlertViewController.m */,
+				201DA90E1C05B26200453605 /* DownLoadAlertViewController.h */,
+				201DA90F1C05B26200453605 /* DownLoadAlertViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		201C81D11BE88D240046E2FA /* DownLoadLog */ = {
+		201DA9101C05B26200453605 /* DownLoadLog */ = {
 			isa = PBXGroup;
 			children = (
-				201C81D21BE88D240046E2FA /* DownloadLog.h */,
-				201C81D31BE88D240046E2FA /* DownloadLog.m */,
+				201DA9111C05B26200453605 /* DownloadLog.h */,
+				201DA9121C05B26200453605 /* DownloadLog.m */,
 			);
 			path = DownLoadLog;
 			sourceTree = "<group>";
 		};
-		201C81D41BE88D240046E2FA /* DownService */ = {
+		201DA9131C05B26200453605 /* DownService */ = {
 			isa = PBXGroup;
 			children = (
-				201C81D51BE88D240046E2FA /* FileDownloadManager.h */,
-				201C81D61BE88D240046E2FA /* FileDownloadManager.m */,
-				201C81D71BE88D240046E2FA /* FileDownloadRequest.h */,
-				201C81D81BE88D240046E2FA /* FileDownloadRequest.m */,
+				201DA9141C05B26200453605 /* FileDownloadManager.h */,
+				201DA9151C05B26200453605 /* FileDownloadManager.m */,
+				201DA9161C05B26200453605 /* FileDownloadRequest.h */,
+				201DA9171C05B26200453605 /* FileDownloadRequest.m */,
 			);
 			path = DownService;
 			sourceTree = "<group>";
 		};
-		201C81D91BE88D240046E2FA /* Model */ = {
+		201DA9181C05B26200453605 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				201C81DA1BE88D240046E2FA /* DownLogModel.h */,
-				201C81DB1BE88D240046E2FA /* DownLogModel.m */,
+				201DA9191C05B26200453605 /* DownLogModel.h */,
+				201DA91A1C05B26200453605 /* DownLogModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
+		};
+		201DA9201C05B2C700453605 /* ReadBookManager */ = {
+			isa = PBXGroup;
+			children = (
+				201DA9251C05B37800453605 /* BooksManager.h */,
+				201DA9261C05B37800453605 /* BooksManager.m */,
+			);
+			name = ReadBookManager;
+			path = DoReading/SynthesizeCommon/ReadBookManager;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -283,6 +338,7 @@
 				201219661BDDC00A0052ED19 /* Frameworks */,
 				201219671BDDC00A0052ED19 /* Resources */,
 				6999BB3ECC32F5FD45FED671 /* Copy Pods Resources */,
+				ABD7D8D98AFB5BB6F42289BB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -413,6 +469,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ABD7D8D98AFB5BB6F42289BB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E1B9443131673368690B78B3 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,14 +506,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201C81E11BE88EF90046E2FA /* DownLoadAlertViewController.m in Sources */,
-				201C81E21BE88EF90046E2FA /* DownloadLog.m in Sources */,
-				201C81E31BE88EF90046E2FA /* FileDownloadManager.m in Sources */,
-				201C81E41BE88EF90046E2FA /* FileDownloadRequest.m in Sources */,
-				201C81E51BE88EF90046E2FA /* DownLogModel.m in Sources */,
+				201DA91F1C05B26200453605 /* DownLogModel.m in Sources */,
+				201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
 				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
-				201219AC1BDDD1970052ED19 /* RootViewController.m in Sources */,
+				201DA91C1C05B26200453605 /* DownloadLog.m in Sources */,
+				201DA91D1C05B26200453605 /* FileDownloadManager.m in Sources */,
+				201DA9271C05B37800453605 /* BooksManager.m in Sources */,
+				201219AC1BDDD1970052ED19 /* HomeViewController.m in Sources */,
+				201DA91B1C05B26200453605 /* DownLoadAlertViewController.m in Sources */,
+				201DA90A1C0590E100453605 /* GetBookViewController.m in Sources */,
+				201DA9061C058F7B00453605 /* DRTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +573,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -514,10 +588,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -543,6 +619,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -551,8 +628,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -562,18 +640,41 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84E78644EEDBF86FF4D538EF /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Huiguang Wang (YP7LD673MT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Application/DR-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"$(PROJECT_DIR)/DRLibrary/DRLibrary/**",
+					"$(PROJECT_DIR)/DRLibrary/DRLibrary",
+					"$(PROJECT_DIR)/DRBase/DRBase",
 				);
 				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Mantle\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"Result\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forhappy.doreading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -584,18 +685,41 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F8AD86294916847D3413D33 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Huiguang Wang (YP7LD673MT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Application/DR-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"${PODS_ROOT}/Headers/Public\"",
-					"$(PROJECT_DIR)/DRLibrary/DRLibrary/**",
+					"$(PROJECT_DIR)/DRLibrary/DRLibrary",
+					"$(PROJECT_DIR)/DRBase/DRBase",
 				);
 				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"Mantle\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"ReactiveCocoa\"",
+					"-framework",
+					"\"Result\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forhappy.doreading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
