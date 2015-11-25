@@ -1,0 +1,18 @@
+//
+//  DRBase-Prefix.pch
+//  DRBase
+//
+//  Created by Wang Huiguang on 15/11/25.
+//  Copyright © 2015年 forHappy. All rights reserved.
+//
+
+#ifndef DRBase_Prefix_pch
+#define DRBase_Prefix_pch
+
+#ifdef __OBJC__
+#import <objc/runtime.h>
+#import "DRMacros.h"
+#import "NSString+grep.h"
+#endif
+
+#endif /* DRBase_Prefix_pch */
