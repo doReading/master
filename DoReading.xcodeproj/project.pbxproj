@@ -13,17 +13,19 @@
 		201219871BDDC00A0052ED19 /* DoReadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219861BDDC00A0052ED19 /* DoReadingTests.m */; };
 		201219921BDDC00A0052ED19 /* DoReadingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219911BDDC00A0052ED19 /* DoReadingUITests.m */; };
 		201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219A21BDDD06F0052ED19 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		201219AC1BDDD1970052ED19 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219AB1BDDD1970052ED19 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		201DA8911C054E0D00453605 /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8901C054E0D00453605 /* libDRLibrary.a */; };
 		201DA8B71C05601600453605 /* libDRBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8B61C05601600453605 /* libDRBase.a */; };
 		201DA9061C058F7B00453605 /* DRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9051C058F7B00453605 /* DRTabBarController.m */; settings = {ASSET_TAGS = (); }; };
-		201DA90A1C0590E100453605 /* GetBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9091C0590E100453605 /* GetBookViewController.m */; settings = {ASSET_TAGS = (); }; };
+		201DA90A1C0590E100453605 /* DRGetBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9091C0590E100453605 /* DRGetBookViewController.m */; settings = {ASSET_TAGS = (); }; };
 		201DA91B1C05B26200453605 /* DownLoadAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA90F1C05B26200453605 /* DownLoadAlertViewController.m */; settings = {ASSET_TAGS = (); }; };
 		201DA91C1C05B26200453605 /* DownloadLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9121C05B26200453605 /* DownloadLog.m */; settings = {ASSET_TAGS = (); }; };
 		201DA91D1C05B26200453605 /* FileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9151C05B26200453605 /* FileDownloadManager.m */; settings = {ASSET_TAGS = (); }; };
 		201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9171C05B26200453605 /* FileDownloadRequest.m */; settings = {ASSET_TAGS = (); }; };
 		201DA91F1C05B26200453605 /* DownLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA91A1C05B26200453605 /* DownLogModel.m */; settings = {ASSET_TAGS = (); }; };
 		201DA9271C05B37800453605 /* BooksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9261C05B37800453605 /* BooksManager.m */; settings = {ASSET_TAGS = (); }; };
+		2027624E1C0856E4004E19CD /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624D1C0856E4004E19CD /* BookModel.m */; settings = {ASSET_TAGS = (); }; };
+		20F148BC1C0C00E700EBE4C5 /* DRAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F148B81C0C00E700EBE4C5 /* DRAddLocationViewController.m */; settings = {ASSET_TAGS = (); }; };
+		20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F148BA1C0C00E700EBE4C5 /* DRHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,17 +60,13 @@
 		201219A11BDDD06F0052ED19 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		201219A21BDDD06F0052ED19 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		201219A61BDDD0C00052ED19 /* DR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DR-Prefix.pch"; sourceTree = "<group>"; };
-		201219AA1BDDD1970052ED19 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		201219AB1BDDD1970052ED19 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		201219AD1BDDD4970052ED19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201DA8901C054E0D00453605 /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "DRLibrary/build/Debug-iphoneos/libDRLibrary.a"; sourceTree = "<group>"; };
-		201DA89A1C055F2F00453605 /* DRBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBase.h; sourceTree = "<group>"; };
-		201DA89C1C055F2F00453605 /* DRBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBase.m; sourceTree = "<group>"; };
 		201DA8B61C05601600453605 /* libDRBase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRBase.a; path = "DRBase/build/Debug-iphoneos/libDRBase.a"; sourceTree = "<group>"; };
 		201DA9041C058F7B00453605 /* DRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTabBarController.h; sourceTree = "<group>"; };
 		201DA9051C058F7B00453605 /* DRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTabBarController.m; sourceTree = "<group>"; };
-		201DA9081C0590E100453605 /* GetBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetBookViewController.h; sourceTree = "<group>"; };
-		201DA9091C0590E100453605 /* GetBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetBookViewController.m; sourceTree = "<group>"; };
+		201DA9081C0590E100453605 /* DRGetBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGetBookViewController.h; sourceTree = "<group>"; };
+		201DA9091C0590E100453605 /* DRGetBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGetBookViewController.m; sourceTree = "<group>"; };
 		201DA90E1C05B26200453605 /* DownLoadAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadAlertViewController.h; sourceTree = "<group>"; };
 		201DA90F1C05B26200453605 /* DownLoadAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadAlertViewController.m; sourceTree = "<group>"; };
 		201DA9111C05B26200453605 /* DownloadLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadLog.h; sourceTree = "<group>"; };
@@ -81,6 +79,12 @@
 		201DA91A1C05B26200453605 /* DownLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLogModel.m; sourceTree = "<group>"; };
 		201DA9251C05B37800453605 /* BooksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BooksManager.h; sourceTree = "<group>"; };
 		201DA9261C05B37800453605 /* BooksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksManager.m; sourceTree = "<group>"; };
+		2027624C1C0856E4004E19CD /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		2027624D1C0856E4004E19CD /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		20F148B71C0C00E700EBE4C5 /* DRAddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRAddLocationViewController.h; sourceTree = "<group>"; };
+		20F148B81C0C00E700EBE4C5 /* DRAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRAddLocationViewController.m; sourceTree = "<group>"; };
+		20F148B91C0C00E700EBE4C5 /* DRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHomeViewController.h; sourceTree = "<group>"; };
+		20F148BA1C0C00E700EBE4C5 /* DRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHomeViewController.m; sourceTree = "<group>"; };
 		84E78644EEDBF86FF4D538EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +141,6 @@
 				2012196B1BDDC00A0052ED19 /* DoReading */,
 				201219851BDDC00A0052ED19 /* DoReadingTests */,
 				201219901BDDC00A0052ED19 /* DoReadingUITests */,
-				201DA8991C055F2F00453605 /* DRBase */,
 				2012196A1BDDC00A0052ED19 /* Products */,
 				1EF74BF947FA92E114F18AFB /* Pods */,
 				04EE84CA587D6ED3817803DA /* Frameworks */,
@@ -224,19 +227,10 @@
 		201219A91BDDD1970052ED19 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				201219AA1BDDD1970052ED19 /* HomeViewController.h */,
-				201219AB1BDDD1970052ED19 /* HomeViewController.m */,
+				20F148B61C0C00E700EBE4C5 /* Controller */,
+				20F148BB1C0C00E700EBE4C5 /* View */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		201DA8991C055F2F00453605 /* DRBase */ = {
-			isa = PBXGroup;
-			children = (
-				201DA89A1C055F2F00453605 /* DRBase.h */,
-				201DA89C1C055F2F00453605 /* DRBase.m */,
-			);
-			path = DRBase;
 			sourceTree = "<group>";
 		};
 		201DA9031C058F5C00453605 /* TabBarController */ = {
@@ -251,8 +245,8 @@
 		201DA9071C05908300453605 /* GetBook */ = {
 			isa = PBXGroup;
 			children = (
-				201DA9081C0590E100453605 /* GetBookViewController.h */,
-				201DA9091C0590E100453605 /* GetBookViewController.m */,
+				201DA9081C0590E100453605 /* DRGetBookViewController.h */,
+				201DA9091C0590E100453605 /* DRGetBookViewController.m */,
 			);
 			name = GetBook;
 			path = DoReading/Modules/GetBook;
@@ -321,10 +315,30 @@
 			children = (
 				201DA9251C05B37800453605 /* BooksManager.h */,
 				201DA9261C05B37800453605 /* BooksManager.m */,
+				2027624C1C0856E4004E19CD /* BookModel.h */,
+				2027624D1C0856E4004E19CD /* BookModel.m */,
 			);
 			name = ReadBookManager;
 			path = DoReading/SynthesizeCommon/ReadBookManager;
 			sourceTree = SOURCE_ROOT;
+		};
+		20F148B61C0C00E700EBE4C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20F148B91C0C00E700EBE4C5 /* DRHomeViewController.h */,
+				20F148BA1C0C00E700EBE4C5 /* DRHomeViewController.m */,
+				20F148B71C0C00E700EBE4C5 /* DRAddLocationViewController.h */,
+				20F148B81C0C00E700EBE4C5 /* DRAddLocationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		20F148BB1C0C00E700EBE4C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -506,17 +520,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */,
 				201DA91F1C05B26200453605 /* DownLogModel.m in Sources */,
 				201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */,
+				2027624E1C0856E4004E19CD /* BookModel.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
 				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
 				201DA91C1C05B26200453605 /* DownloadLog.m in Sources */,
 				201DA91D1C05B26200453605 /* FileDownloadManager.m in Sources */,
 				201DA9271C05B37800453605 /* BooksManager.m in Sources */,
-				201219AC1BDDD1970052ED19 /* HomeViewController.m in Sources */,
 				201DA91B1C05B26200453605 /* DownLoadAlertViewController.m in Sources */,
-				201DA90A1C0590E100453605 /* GetBookViewController.m in Sources */,
+				201DA90A1C0590E100453605 /* DRGetBookViewController.m in Sources */,
 				201DA9061C058F7B00453605 /* DRTabBarController.m in Sources */,
+				20F148BC1C0C00E700EBE4C5 /* DRAddLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +668,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DRLibrary/DRLibrary",
-					"$(PROJECT_DIR)/DRBase/DRBase",
+					"$(PROJECT_DIR)/DRBase/DRBase/**",
+					"\"${PODS_ROOT}/Headers/Private/Mantle\"",
 				);
 				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -669,10 +686,6 @@
 					"\"Mantle\"",
 					"-framework",
 					"\"Masonry\"",
-					"-framework",
-					"\"ReactiveCocoa\"",
-					"-framework",
-					"\"Result\"",
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forhappy.doreading;
@@ -697,7 +710,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DRLibrary/DRLibrary",
-					"$(PROJECT_DIR)/DRBase/DRBase",
+					"$(PROJECT_DIR)/DRBase/DRBase/**",
+					"\"${PODS_ROOT}/Headers/Private/Mantle\"",
 				);
 				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -714,10 +728,6 @@
 					"\"Mantle\"",
 					"-framework",
 					"\"Masonry\"",
-					"-framework",
-					"\"ReactiveCocoa\"",
-					"-framework",
-					"\"Result\"",
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forhappy.doreading;

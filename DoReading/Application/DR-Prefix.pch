@@ -24,13 +24,14 @@
 //通过pods添加的三方库
 #import "Masonry.h"
 #import "AFNetworking.h"
-#import "Masonry.h"
 #import "Mantle.h"
-#import "ReactiveCocoa.h"
+#import "MTLEXTScope.h"
+#import "EXTKeyPathCoding.h"
 
 
 //自写公用库
 #import "DownLoadAlertViewController.h"
+#import "BooksManager.h"
 
 #endif
 

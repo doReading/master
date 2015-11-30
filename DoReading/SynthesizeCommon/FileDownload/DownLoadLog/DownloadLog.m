@@ -49,7 +49,11 @@
             NSDictionary *d = [dict objectForKey:key];
             NSError *error = nil;
             DownLogModel *model = [MTLJSONAdapter modelOfClass:[DownLogModel class] fromJSONDictionary:d error:&error];
-            [_downLogDict setObject:model forKey:key];
+            if (error) {
+                NSLog(@"%@",error);
+            }else {
+                [_downLogDict setObject:model forKey:key];
+            }
         }
         
     }

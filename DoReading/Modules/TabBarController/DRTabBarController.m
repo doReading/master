@@ -8,8 +8,8 @@
 
 #import "DRTabBarController.h"
 
-#import "HomeViewController.h"
-#import "GetBookViewController.h"
+#import "DRHomeViewController.h"
+#import "DRGetBookViewController.h"
 
 @interface DRTabBarController ()
 
@@ -21,11 +21,11 @@
     [super viewDidLoad];
     self.tabBar.translucent = NO;
     
-    HomeViewController *homeVc = [[HomeViewController alloc] init];
+    DRHomeViewController *homeVc = [[DRHomeViewController alloc] init];
     homeVc.title = @"读";
     DRNavigationController *homeNc = [[DRNavigationController alloc] initWithRootViewController:homeVc];
     
-    GetBookViewController *getVc = [[GetBookViewController alloc] init];
+    DRGetBookViewController *getVc = [[DRGetBookViewController alloc] init];
     getVc.title = @"行";
     DRNavigationController *getNc = [[DRNavigationController alloc] initWithRootViewController:getVc];
     

@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BookModel.h"
+
+typedef void (^Completed)(BookModel *completed);
 
 @interface BooksManager : NSObject
 
-@property (nonatomic, copy, readonly) NSString *bookStoreDirectory;
++(void)instanceSignalManager;
 
-+ (instancetype)sharedInstance;
++ (NSArray *)getAllBooksName;
 
-- (NSArray *)allBooksInfo;
-
++ (void)bookModelFor:(NSString *)name completed:(Completed)completed;
++ (void)bookDateFor:(NSString *)name completed:(void(^)(NSData *data,NSStringEncoding encode, NSError *error))completed;
++ (void)bookModelsForAll:(void(^)(NSArray *modelArray))completed;
++ (void)updateLocationLogWithArray:(void(^)(NSArray *array))complete;
 @end

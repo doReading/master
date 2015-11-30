@@ -18,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //初始化下载日志
+    [DownloadLog sharedInstance];
+    //初始化本地书籍管理器
+    [BooksManager instanceSignalManager];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     DRTabBarController *rootVc = [[DRTabBarController alloc] init];
     self.window.rootViewController = rootVc;

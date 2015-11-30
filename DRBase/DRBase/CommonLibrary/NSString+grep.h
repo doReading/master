@@ -10,10 +10,13 @@
 
 @interface NSString(grep)
 
++ (NSString *)stringWithSize:(long long)size;
+
 - (BOOL)isStringForGrep:(NSString *)grep;
 
 //根据网页链接获取下载文件的文件 全名、前名、后缀名
 - (NSString *)getTotalName;
 - (NSString *)getName;
 - (NSString *)getExtendName;
+
 @end
