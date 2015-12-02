@@ -33,6 +33,12 @@
 #import "DownLoadAlertViewController.h"
 #import "BooksManager.h"
 
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#endif
+
 #endif
 
 #endif /* DR_Prefix_pch */
