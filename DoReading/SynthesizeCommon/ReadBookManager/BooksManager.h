@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "BookModel.h"
 
+typedef NS_ENUM(NSUInteger, BooksManagerWay) {
+    BooksManagerNone,
+    BooksManagerLocation,
+    BooksManagerDesk
+};
+
 typedef void (^Completed)(BookModel *completed);
 
 @interface BooksManager : NSObject
@@ -17,8 +23,25 @@ typedef void (^Completed)(BookModel *completed);
 
 + (NSArray *)getAllBooksName;
 
-+ (void)bookModelFor:(NSString *)name completed:(Completed)completed;
-+ (void)bookDateFor:(NSString *)name completed:(void(^)(NSData *data,NSStringEncoding encode, NSError *error))completed;
-+ (void)bookModelsForAll:(void(^)(NSArray *modelArray))completed;
-+ (void)updateLocationLogWithArray:(void(^)(NSArray *array))complete;
++ (void)bookModelForLocation:(NSString *)name completed:(Completed)completed;
+
++ (void)bookDateForLocatin:(NSString *)name completed:(void(^)(NSData *data,NSStringEncoding encode, NSError *error))completed;
+
+//更新后获取数据
++ (void)booksInLocationUpdateWithArray:(void(^)(NSArray *array))complete;
++ (void)booksInLocationUpdateExpectDeskWithArray:(void(^)(NSArray *array))complete;
+@end
+
+@interface BooksManager(BookDestTop)
+
++ (NSArray *)getAllDeskBooksName;
+
++ (void)bookModelInDeskLog:(NSString *)name completed:(Completed)completed;
+
++ (void)bookModelsInDeskLog:(void(^)(NSArray *modelArray))completed;
+
++ (void)addBookModelstoDeskLog:(NSArray *)models complete:(void(^)(NSArray *modelArray))completed;
+
++ (void)storeDeskLog;
+
 @end

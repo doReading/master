@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.automaticallyAdjustsScrollViewInsets = YES;
     self.navigationBar.barStyle = UIBarStyleDefault;
     self.navigationBar.backgroundColor = COM_COLOR_BLUE;
     self.navigationBar.tintColor = [UIColor whiteColor];

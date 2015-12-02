@@ -22,7 +22,8 @@
     self.keyBoardWillShow = YES;
     
     NSString *str = @"http://www.qingkan.net/book/rudaozhisheng/txt.html";
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    
     [self.view addSubview:webView];
     webView.delegate = self;
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:str]];

@@ -18,6 +18,9 @@
 {
     [super loadView];
     _keyBoardWillShow = NO;
+    CGRect rect = self.view.frame;
+    rect.size.height -= 64;
+    self.view.frame = rect;
 }
 
 - (void)viewDidLoad {

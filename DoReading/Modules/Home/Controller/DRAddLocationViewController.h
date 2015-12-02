@@ -10,4 +10,6 @@
 
 @interface DRAddLocationViewController : DRBaseViewController
 
+@property (nonatomic, copy) void(^getBookModel)(NSArray *bookModels);
+
 @end

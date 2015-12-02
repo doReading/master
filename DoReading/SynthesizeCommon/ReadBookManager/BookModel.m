@@ -26,7 +26,8 @@
     return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:@{
                                                @0:@(DRBookPositionNone),
                                                @1:@(DRBookPositionReading),
-                                               @2:@(DRBookPositionLayDown)} defaultValue:DRBookPositionNone reverseDefaultValue:DRBookPositionNone];
+                                               @2:@(DRBookPositionLayDown),
+                                               @3:@(DRBookPositionDeleted)} defaultValue:DRBookPositionNone reverseDefaultValue:DRBookPositionNone];
 }
 
 @end

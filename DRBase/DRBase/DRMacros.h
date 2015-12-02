@@ -61,6 +61,12 @@ return cs;\
 #define DR_FONT_L5         [UIFont systemFontOfSize:13.f]
 
 //颜色
+#define  COLOR_LIGHT [UIColor colorWithRed:37/255.0 green:74/255.0 blue:100/255.0 alpha:1]
 #define  BACK_COLOR_GRAY [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1]
 #define  COM_COLOR_BLUE [UIColor colorWithRed:23/255.0 green:152/255.0 blue:185/255.0 alpha:1]
+#define  COLOR_BOOKCOVER_WARM [UIColor colorWithRed:194/255.0 green:117/255.0 blue:32/255.0 alpha:1]
+
+//书本颜色207	140	76
+#define  COLOR_BOOK_ORANGE [UIColor colorWithRed:203/255.0 green:165/255.0 blue:120/255.0 alpha:1]
+
 #endif /* DRMacros_h */

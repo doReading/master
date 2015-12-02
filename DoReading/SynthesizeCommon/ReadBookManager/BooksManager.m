@@ -11,7 +11,13 @@
 @interface BooksManager()
 
 @property (nonatomic, copy, readonly) NSString *bookStoreDirectory;
+
+@property (nonatomic, copy) NSString *booksDeskLogPath;
 @property (nonatomic, copy) NSString *booksLogPath;
+
+//桌面
+@property (nonatomic, strong) NSMutableDictionary *booksDeskDict;
+//真实
 @property (nonatomic, strong) NSMutableDictionary *booksLogDict;
 
 @property (nonatomic, strong) NSLock *lock;
@@ -27,9 +33,13 @@
     NSArray *arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
     _bookStoreDirectory = [arr.firstObject stringByAppendingString:@"/FileStore/"];
+    
+    _booksDeskLogPath = [arr.firstObject stringByAppendingString:@"/booksDeskLog"];
     _booksLogPath = [arr.firstObject stringByAppendingString:@"/booksLog"];
     
-    _booksLogDict = [self updateLocationLogNotAsyn];
+    _booksDeskDict = [self updateDeskLog];
+    _booksLogDict = [self updateLocationLog];
+    
     return self;
 }
 
@@ -49,19 +59,30 @@
     [BooksManager manager];
 }
 
-#pragma mark - 类方法，获得数据
+#pragma mark - 类方法，获得文件全名
 + (NSArray *)getAllBooksName
 {
     BooksManager *manager = [BooksManager manager];
     return manager.booksLogDict.allKeys;
 }
 
-+ (void)bookModelFor:(NSString *)name completed:(Completed)completed
+#pragma mark - 根据名称获得书籍model
++ (void)bookModelForLocation:(NSString *)name completed:(Completed)completed
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         BooksManager *manager = [BooksManager manager];
         BookModel *model = manager.booksLogDict[name];
         completed(model);
+    });
+}
+
++ (void)bookModelForDesk:(NSString *)name completed:(Completed)completed
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BooksManager *manager = [BooksManager manager];
+        BookModel *model = manager.booksDeskDict[name];
+        completed(model);
+        [manager store:BooksManagerDesk];
     });
 }
 
@@ -79,11 +100,17 @@
     }
     return 0;
 }
-#pragma mark - 输出
-+ (void)bookDateFor:(NSString *)name completed:(void(^)(NSData *data,NSStringEncoding encode, NSError *error))completed
+#pragma mark - 输出文件数据
++ (void)bookDateForLocatin:(NSString *)name completed:(void(^)(NSData *data,NSStringEncoding encode, NSError *error))completed
 {
     BooksManager *manager = [BooksManager manager];
     NSString *path = [manager.bookStoreDirectory stringByAppendingPathComponent:name];
+    //如果文件被删
+    if (![CFileHandle containFileAtPath:path]) {
+        completed(nil,0,nil);
+        return;
+    }
+    
     NSData *data = [NSData dataWithContentsOfFile:path];
     
     NSStringEncoding encode;
@@ -101,20 +128,68 @@
     completed(data,encode,error);
 }
 
-+ (void)bookModelsForAll:(void(^)(NSArray *modelArray))completed
+//读取Desklog
+- (NSMutableDictionary *)getDeskLogInfo
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        BooksManager *manager = [BooksManager manager];
-        if(manager.booksLogDict.count > 0) {
-            completed(manager.booksLogDict.allValues);
-        } else {
-            completed(@[]);
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:_booksDeskLogPath];
+    if (dict == nil) {
+        dict = [NSMutableDictionary dictionary];
+    }
+    return dict;
+}
+
+//获取桌面书籍
+- (NSMutableDictionary *)updateDeskLog
+{
+    NSMutableDictionary *deskDict = [self getDeskLogInfo];
+    //桌面书籍Log
+    for (NSString *key in deskDict.allKeys) {
+        NSDictionary *dict = deskDict[key];
+        
+        NSError *error = nil;
+        BookModel *model = [MTLJSONAdapter modelOfClass:[BookModel class] fromJSONDictionary:dict error:&error];
+        if (error == nil) {
+            [deskDict setValue:model forKey:key];
+        }else {
+            NSLog(@"BooksManager-%@",error);
+            [deskDict removeObjectForKey:key];
         }
-    });
+        
+    }
+    
+    return deskDict;
+}
+
+#pragma mark - 更新本地书籍
++ (void)booksInLocationUpdateWithArray:(void(^)(NSArray *array))complete
+{
+    BooksManager *manager = [BooksManager manager];
+    [manager updateLocationBooks:^(NSDictionary *dictionary) {
+        if (dictionary.count > 0) {
+            complete(dictionary.allValues);
+        } else {
+            complete(@[]);
+        }
+    }];
+}
+
++ (void)booksInLocationUpdateExpectDeskWithArray:(void(^)(NSArray *array))complete
+{
+    BooksManager *manager = [BooksManager manager];
+    [manager updateLocationBooks:^(NSDictionary *dictionary) {
+        NSMutableArray *arr = [NSMutableArray array];
+        for (NSString *key in dictionary.allKeys) {
+            if (nil == [manager.booksDeskDict objectForKey:key]) {
+                [arr addObject:dictionary[key]];
+            }
+        }
+        complete(arr);
+    }];
 }
 
 #pragma mark - 获得所有书籍文件名
--(NSArray *)allBooksName
+-(NSArray *)allLocatoinBooksName
 {
     NSArray *arr = [CFileHandle getContentsbyDir:self.bookStoreDirectory];
     if (arr == nil) {
@@ -122,7 +197,7 @@
     }
     return arr;
 }
-
+//根据本地文件名 获取bookModel
 - (BookModel *)modelByName:(NSString *)name
 {
     NSString *path = [_bookStoreDirectory stringByAppendingPathComponent:name];
@@ -134,104 +209,75 @@
     return model;
 }
 
-
+//根据本地文件路径 获取bookModel
 - (BookModel *)modelByPath:(NSString *)path
 {
-    
     BookModel *model = [[BookModel alloc] init];
     model.bookName = [path getTotalName];
     model.state = DRBookPositionNone;
     model.bookSize = [CFileHandle getFileSize:path];
-
     return model;
 }
 
-- (NSMutableDictionary *)updateLocationLogNotAsyn
+//更新本地书籍
+- (NSMutableDictionary *)updateLocationLog
 {
-    NSMutableDictionary *updateDict = [NSMutableDictionary dictionary];
+    NSMutableDictionary *LocationDict = [NSMutableDictionary dictionary];
     //根据本地文件获取数据
-    for (NSString *name in [self allBooksName]) {
+    for (NSString *name in [self allLocatoinBooksName]) {
         BookModel *model = [self modelByName:name];
-        [updateDict setValue:model forKey:name];
+        [LocationDict setValue:model forKey:name];
     }
     
-    //读取本地log
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:_booksLogPath];
-    if (dict == nil) {
-        NSLog(@"读取数据不成功!!!");
-        dict = [NSMutableDictionary dictionary];
-    }
-    for (NSString *key in dict.allKeys) {
-        NSDictionary *d = dict[key];
-        BookModel *model = updateDict[key];
-        if (nil == model) {
-            continue;
-        }
-        
-        NSError *error = nil;
-        BookModel *bookModel = [MTLJSONAdapter modelOfClass:[BookModel class] fromJSONDictionary:d error:&error];
-        if (error) {
-            NSLog(@"%@",error);
-        }else {
-            model.lastOpenTime = bookModel.lastOpenTime;
-            model.bookMark = bookModel.bookMark;
-            if (bookModel.encode > 0) {
-                model.encode = bookModel.encode;
-            }
-            model.state = bookModel.state;
-        }
-    }
-    
-    [self store];
-    return updateDict;
+    return LocationDict;
 }
 
-- (void)updateLocationLogWithDict:(void(^)(NSMutableDictionary *dictionary))complete
+//更新本地书籍记录
+- (void)updateLocationBooks:(void(^)(NSDictionary *dictionary))complete
 {
     @weakify(self);
     dispatch_async(dispatch_get_main_queue(), ^{
         @strongify(self);
-        self.booksLogDict = [self updateLocationLogNotAsyn];
+        self.booksLogDict = [self updateLocationLog];
+        [self store:BooksManagerLocation];
         complete(self.booksLogDict);
     });
 }
 
-+ (void)updateLocationLogWithArray:(void(^)(NSArray *array))complete
-{
-    BooksManager *manager = [BooksManager manager];
-    [manager updateLocationLogWithDict:^(NSMutableDictionary *dictionary) {
-        if (dictionary.count > 0) {
-            complete(dictionary.allValues);
-        } else {
-            complete(@[]);
-        }
-        
-    }];
-}
-
-- (void)store
+- (void)store:(BooksManagerWay)way
 {
     @weakify(self);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         @strongify(self);
-
-        if (self.booksLogDict.count > 0) {
-            if (self.booksLogPath.length > 0) {
+        NSDictionary *logDict = @{};
+        NSString *path = @"";
+        if (way == BooksManagerDesk) {
+            logDict = self.booksDeskDict;
+            path = self.booksDeskLogPath;
+        }else if(way == BooksManagerLocation){
+            logDict = self.booksLogDict;
+            path = self.booksLogPath;
+        }else {
+            return;
+        }
+        
+        if (logDict.count > 0) {
+            if (path.length > 0) {
                 NSMutableDictionary *writeLog = [NSMutableDictionary dictionary];
-                for (NSString *key in self.booksLogDict.allKeys) {
+                for (NSString *key in logDict.allKeys) {
                     NSError *error = nil;
-                    DownLogModel *model = self.booksLogDict[key];
+                    DownLogModel *model = logDict[key];
                     NSDictionary *dict = [MTLJSONAdapter JSONDictionaryFromModel:model error:&error];
                     if (!error && dict) {
                         [writeLog setObject:dict forKey:key];
                     }else {
-                        NSLog(@"%@",error);
+                        NSLog(@"BooksManager-%@",error);
                     }
                 }
                 
                 if (writeLog.count > 0) {
                     [self.lock lock];
-                    [writeLog writeToURL:[NSURL fileURLWithPath:self.booksLogPath] atomically:YES];
+                    [writeLog writeToFile:path atomically:YES];
                     [self.lock unlock];
                 }
             }
@@ -240,4 +286,56 @@
 }
 
 
+@end
+
+@implementation BooksManager(BookDestTop)
++ (NSArray *)getAllDeskBooksName
+{
+    BooksManager *manager = [BooksManager manager];
+    return manager.booksDeskDict.allKeys;
+}
+
++ (void)bookModelInDeskLog:(NSString *)name completed:(Completed)completed
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BooksManager *manager = [BooksManager manager];
+        BookModel *model = manager.booksDeskDict[name];
+        completed(model);
+        [manager store:BooksManagerDesk];
+    });
+}
+
+#pragma mark - 更新书桌记录
++ (void)bookModelsInDeskLog:(void(^)(NSArray *modelArray))completed
+{
+    BooksManager *manager = [BooksManager manager];
+    if(manager.booksDeskDict.count > 0) {
+        completed(manager.booksDeskDict.allValues);
+    } else {
+        completed(@[]);
+    }
+}
+
++ (void)addBookModelstoDeskLog:(NSArray *)models complete:(void(^)(NSArray *modelArray))completed
+{
+    BooksManager *manager = [BooksManager manager];
+    for (id book in models) {
+        if ([book isKindOfClass:[BookModel class]]) {
+            BookModel *model = book;
+            [manager.booksDeskDict setObject:model forKey:model.bookName];
+        }
+    }
+    
+    if(manager.booksDeskDict.count > 0) {
+        completed(manager.booksDeskDict.allValues);
+    } else {
+        completed(@[]);
+    }
+    [self storeDeskLog];
+}
+
++ (void)storeDeskLog
+{
+    [[BooksManager manager] store:BooksManagerDesk];
+}
 @end

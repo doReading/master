@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSUInteger, DRBookPositionState) {
     DRBookPositionNone = 0, //默认，没有打开过的小说
     DRBookPositionReading = 1,  //正在读的小说
-    DRBookPositionLayDown = 2   //读过，但不在书桌上的小说
+    DRBookPositionLayDown = 2,   //读过，但不在书桌上的小说
+    DRBookPositionDeleted = 3   //已被删除
 };
 
 @interface BookModel : MTLModel<MTLJSONSerializing>

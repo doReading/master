@@ -19,22 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBar.translucent = NO;
+//    self.tabBar.translucent = NO;
     
     DRHomeViewController *homeVc = [[DRHomeViewController alloc] init];
     homeVc.title = @"读";
     DRNavigationController *homeNc = [[DRNavigationController alloc] initWithRootViewController:homeVc];
+    homeNc.tabBarItem.image = [UIImage imageNamed:@"readBook"];
     
     DRGetBookViewController *getVc = [[DRGetBookViewController alloc] init];
     getVc.title = @"行";
     DRNavigationController *getNc = [[DRNavigationController alloc] initWithRootViewController:getVc];
+    getNc.tabBarItem.image = [UIImage imageNamed:@"forReading"];
     
     self.viewControllers = @[homeNc, getNc];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end
