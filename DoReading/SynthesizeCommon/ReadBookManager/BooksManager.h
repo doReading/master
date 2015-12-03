@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, BooksManagerWay) {
     BooksManagerDesk
 };
 
-typedef void (^Completed)(BookModel *completed);
+typedef void (^Completed)(BookModel *model);
 
 @interface BooksManager : NSObject
 

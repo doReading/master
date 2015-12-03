@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, DRBookPositionState) {
 //需合并
 @property (nonatomic, assign) NSTimeInterval lastOpenTime;
 //需合并
-@property (nonatomic, assign) long long bookMark;
+@property (nonatomic, assign) NSUInteger bookMark;
 //需合并
 @property (nonatomic, assign) DRBookPositionState state;
 

@@ -66,12 +66,15 @@
         }];
         
         UIButton *refreshBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        refreshBtn.layer.borderColor = COM_COLOR_BLUE.CGColor;
+        refreshBtn.layer.borderWidth = 1.f;
+        refreshBtn.layer.cornerRadius = 5.f;
         [refreshBtn setTitle:@"刷新" forState:UIControlStateNormal];
         [refreshBtn addTarget:self action:@selector(refreshBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [_cover addSubview:refreshBtn];
         [refreshBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(label);
-            make.width.equalTo(@45);
+            make.width.equalTo(@75);
             make.top.equalTo(label.mas_bottom).offset(5);
         }];
     }
