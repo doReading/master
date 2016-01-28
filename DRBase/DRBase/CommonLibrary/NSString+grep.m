@@ -7,6 +7,7 @@
 //
 
 #import "NSString+grep.h"
+
 typedef unsigned long long TFileSize;
 
 @implementation NSString(grep)

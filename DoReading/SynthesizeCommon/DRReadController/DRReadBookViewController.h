@@ -7,9 +7,10 @@
 //
 
 #import "DRBaseViewController.h"
+@class DRBookSet;
 
 @interface DRReadBookViewController : DRBaseViewController
 
-@property (nonatomic, strong) BookModel *deskBookModel;
+- (void)loadReadViewControllerWith:(BookModel *)deskBookModel;
 
 @end

@@ -108,7 +108,7 @@
     BookModel *model = self.deskBooksArray[indexPath.item];
     DRReadBookViewController *readVc = [[DRReadBookViewController alloc] init];
     readVc.hidesBottomBarWhenPushed = YES;
-    readVc.deskBookModel = model;
+    [readVc loadReadViewControllerWith:model];
     [self.navigationController pushViewController:readVc animated:YES];
 }
 

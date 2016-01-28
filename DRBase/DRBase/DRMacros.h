@@ -53,9 +53,9 @@ return cs;\
 //L2字体，例如cell的name大小，常规
 #define DR_FONT_L2         [UIFont systemFontOfSize:16.f]
 #define DR_FONT_L2_BOLD    [UIFont boldSystemFontOfSize:16.f]
-//L3字体，例如sectoin的sub title大小，提示
+//L3字体
 #define DR_FONT_L3         [UIFont systemFontOfSize:15.f]
-//L4字体，例如cell的sub title大小，辅助
+//L4字体
 #define DR_FONT_L4         [UIFont systemFontOfSize:14.f]
 //L5字体，最小，辅助
 #define DR_FONT_L5         [UIFont systemFontOfSize:13.f]

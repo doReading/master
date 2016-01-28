@@ -12,6 +12,9 @@
 
 @property (nonatomic, strong) NSString *currentRequestString;
 
+@property (nonatomic, strong) UIWebView *webView;
+
+@property (nonatomic, strong) DownLoadAlertViewController *alertDownView;
 @end
 
 @implementation DRGetBookViewController
@@ -21,14 +24,15 @@
     
     self.keyBoardWillShow = YES;
     
-    NSString *str = @"http://www.qingkan.net/book/rudaozhisheng/txt.html";
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    NSString *str = @"http://www.qingkan.net";
+    _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     
-    [self.view addSubview:webView];
-    webView.delegate = self;
+    [self.view addSubview:_webView];
+    _webView.delegate = self;
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:str]];
-    [webView loadRequest:request];
+    [_webView loadRequest:request];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStyleDone target:self action:@selector(refreshItemClick:)];
 }
 
 #pragma mark - UIWebViewDelegate
@@ -45,22 +49,32 @@
         {
             DownLoadAlertViewController *alert = [[DownLoadAlertViewController alloc] initWithURL:[request URL] useCache:NO allowResume:YES];
             [alert showIn:self.navigationController];
+            self.alertDownView = alert;
         }
         return NO;
     }
     return YES;
 }
 
-#pragma mark - keyBoard
+- (void)refreshItemClick:(UIBarButtonItem *)item
+{
+    //清除UIWebView的缓存
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    NSString *str = @"http://www.qingkan.net/book/rudaozhisheng/txt.html";
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:str]];
+    [_webView loadRequest:request];
+}
+
+#pragma mark - shouldDoForKeyBoard
 
 -(void)shouldDoForKeyBoardWillShow:(CGFloat)height
 {
-    NSLog(@"键盘弹出");
+    [self.alertDownView rasieWhenKeyboardShow:height];
 }
 
 - (void)shouldDoForKeyBoardWillHide:(CGFloat)height
 {
-    NSLog(@"键盘收起");
+    [self.alertDownView downWhenKeyboardHide:height];
 }
 
 @end

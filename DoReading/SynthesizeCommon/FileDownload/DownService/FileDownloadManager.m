@@ -130,13 +130,13 @@
                                                                      [[DownloadLog sharedInstance] addProgressToDownLog:progress byName:name];
                                                                  } completionBlock:^(FileDownloadRequest *request, NSURL *filePath, BOOL hitCache, NSError *error) {
                                                                      //存储到日志：下载完成
-                                                                     [[DownloadLog sharedInstance] addStateToDownLog:[[filePath absoluteString] getTotalName] state:DownOperationFinishedState];
+                                                                     [[DownloadLog sharedInstance] addStateToDownLog:name state:DownOperationFinishedState];
                                                                      
                                                                      if (completionBlock) {
                                                                          completionBlock(request, filePath, error);
                                                                      }
                                                                      if (!hitCache) {
-                                                                         [self finishFileDownloadWithName:[[filePath absoluteString] getTotalName]];
+                                                                         [self finishFileDownloadWithName:name];
                                                                      }
                                                                  }];
     if (request && name.length > 0) {

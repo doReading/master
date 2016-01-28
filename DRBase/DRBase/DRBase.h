@@ -11,6 +11,8 @@
 
 #import "NSString+grep.h"
 #import "UIView+indicator.h"
+#import "UILabel+DRFactory.h"
+#import "UITextField+DRFactory.h"
 #import "DRNavigationController.h"
 #import "DRBaseViewController.h"
 

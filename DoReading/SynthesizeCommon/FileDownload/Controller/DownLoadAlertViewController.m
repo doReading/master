@@ -39,6 +39,7 @@
 @property (nonatomic, strong) UIButton *downSureButton;
 @property (nonatomic, strong) UIButton *editButton;
 
+
 @end
 
 @implementation DownLoadAlertViewController
@@ -102,6 +103,22 @@
     }];
 }
 
+- (void)rasieWhenKeyboardShow:(CGFloat)height
+{
+    if (self.parentVc) {
+        if (nil != self.parentVc.tabBarController) {
+            height -= self.parentVc.tabBarController.tabBar.height;
+        }
+        [self animationWithBackViewTransform:-height-DOWNALERT_HEIGHT completion:nil];
+    }
+}
+
+- (void)downWhenKeyboardHide:(CGFloat)height
+{
+    if (self.parentVc) {
+        [self animationWithBackViewTransform:-DOWNALERT_HEIGHT completion:nil];
+    }
+}
 #pragma mark - 动画处理
 - (void)animationWithBackViewTransform:(CGFloat)height completion:(void(^)())block
 {
@@ -125,6 +142,7 @@
 #pragma mark - 移除下载的上拉弹窗
 - (void)removeFromSuper
 {
+    self.parentVc = nil;
     [self animationWithBackViewTransform:0 completion:^{
         [self removeFromParentViewController];
         [self.view removeFromSuperview];

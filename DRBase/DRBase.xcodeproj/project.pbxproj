@@ -12,6 +12,8 @@
 		201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92C1C05BC2400453605 /* NSString+grep.m */; settings = {ASSET_TAGS = (); }; };
 		201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92F1C05BC8A00453605 /* UIView+indicator.m */; settings = {ASSET_TAGS = (); }; };
 		2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624A1C084925004E19CD /* DRBaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DB1C1196C700030046 /* UILabel+DRFactory.m */; settings = {ASSET_TAGS = (); }; };
+		203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DE1C11990300030046 /* UITextField+DRFactory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		201DA92F1C05BC8A00453605 /* UIView+indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+indicator.m"; sourceTree = "<group>"; };
 		202762491C084925004E19CD /* DRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBaseViewController.h; sourceTree = "<group>"; };
 		2027624A1C084925004E19CD /* DRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBaseViewController.m; sourceTree = "<group>"; };
+		203D85DA1C1196C700030046 /* UILabel+DRFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DRFactory.h"; sourceTree = "<group>"; };
+		203D85DB1C1196C700030046 /* UILabel+DRFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DRFactory.m"; sourceTree = "<group>"; };
+		203D85DD1C11990300030046 /* UITextField+DRFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DRFactory.h"; sourceTree = "<group>"; };
+		203D85DE1C11990300030046 /* UITextField+DRFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DRFactory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,10 @@
 				201DA92C1C05BC2400453605 /* NSString+grep.m */,
 				201DA92E1C05BC8A00453605 /* UIView+indicator.h */,
 				201DA92F1C05BC8A00453605 /* UIView+indicator.m */,
+				203D85DA1C1196C700030046 /* UILabel+DRFactory.h */,
+				203D85DB1C1196C700030046 /* UILabel+DRFactory.m */,
+				203D85DD1C11990300030046 /* UITextField+DRFactory.h */,
+				203D85DE1C11990300030046 /* UITextField+DRFactory.m */,
 			);
 			path = CommonLibrary;
 			sourceTree = "<group>";
@@ -158,7 +168,9 @@
 				201DA8C21C05652500453605 /* DRNavigationController.m in Sources */,
 				201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */,
 				201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */,
+				203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */,
 				2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */,
+				203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */,
 				201DA8B01C055FCA00453605 /* DRBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

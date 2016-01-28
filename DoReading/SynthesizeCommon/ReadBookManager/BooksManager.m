@@ -107,8 +107,10 @@
     NSString *path = [manager.bookStoreDirectory stringByAppendingPathComponent:name];
     //如果文件被删
     if (![CFileHandle containFileAtPath:path]) {
-        completed(nil,0,nil);
-        return;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            completed(nil,0,nil);
+            return;
+        });
     }
     
     NSData *data = [NSData dataWithContentsOfFile:path];

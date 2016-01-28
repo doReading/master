@@ -39,7 +39,7 @@
 
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:_downHistoryPath];
         if (dict == nil) {
-            NSLog(@"读取数据不成功!!!");
+            NSLog(@"重新创建downLog!!!");
             dict = [NSMutableDictionary dictionary];
         }
         
@@ -118,7 +118,7 @@
             model.progress = progress;
             NSLog(@"%@下载进度_%.3f",name,progress);
         }else {
-            NSLog(@"error:%@对应模型查找失败",name);
+            NSLog(@"addProgress_%@_对应模型查找失败",name);
         }
 //        [self storeDownLog];
         return YES;
@@ -160,7 +160,7 @@
         if (nil != model) {
             model.state = state;
         }else {
-            NSLog(@"error:%@对应模型查找失败",name);
+            NSLog(@"addState_%@_对应模型查找失败",name);
         }
         [self storeDownLog];
         return YES;

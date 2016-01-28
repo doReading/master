@@ -15,4 +15,6 @@
 
 - (void)showIn:(UIViewController *)viewController;
 
+- (void)rasieWhenKeyboardShow:(CGFloat)height;
+- (void)downWhenKeyboardHide:(CGFloat)height;
 @end
