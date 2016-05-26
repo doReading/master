@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSString+stringSize.h"
 #import "NSString+grep.h"
 #import "UIView+indicator.h"
 #import "UILabel+DRFactory.h"

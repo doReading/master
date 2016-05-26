@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1E53B9B7EF5F355E01861503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E62020796F41A3C4FE0375D /* Pods.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		200EA86C1CF6FECB00097D48 /* DRGlobalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */; };
+		200EA86D1CF6FECB00097D48 /* GlobalInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */; };
+		200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8701CF6FEF600097D48 /* DRShowTitleView.m */; };
 		2012196E1BDDC00A0052ED19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2012196D1BDDC00A0052ED19 /* main.m */; };
 		201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201219781BDDC00A0052ED19 /* Assets.xcassets */; };
-		201219871BDDC00A0052ED19 /* DoReadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219861BDDC00A0052ED19 /* DoReadingTests.m */; };
-		201219921BDDC00A0052ED19 /* DoReadingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219911BDDC00A0052ED19 /* DoReadingUITests.m */; };
 		201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219A21BDDD06F0052ED19 /* AppDelegate.m */; };
 		201DA8911C054E0D00453605 /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8901C054E0D00453605 /* libDRLibrary.a */; };
 		201DA8B71C05601600453605 /* libDRBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8B61C05601600453605 /* libDRBase.a */; };
@@ -32,35 +33,18 @@
 		20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F148BA1C0C00E700EBE4C5 /* DRHomeViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		201219831BDDC00A0052ED19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 201219611BDDC00A0052ED19 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 201219681BDDC00A0052ED19;
-			remoteInfo = DoReading;
-		};
-		2012198E1BDDC00A0052ED19 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 201219611BDDC00A0052ED19 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 201219681BDDC00A0052ED19;
-			remoteInfo = DoReading;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0E62020796F41A3C4FE0375D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8AD86294916847D3413D33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		200EA8671CF6FECB00097D48 /* DRGlobalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGlobalInfo.h; sourceTree = "<group>"; };
+		200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGlobalInfo.m; sourceTree = "<group>"; };
+		200EA86A1CF6FECB00097D48 /* GlobalInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalInfoModel.h; sourceTree = "<group>"; };
+		200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalInfoModel.m; sourceTree = "<group>"; };
+		200EA86F1CF6FEF600097D48 /* DRShowTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRShowTitleView.h; sourceTree = "<group>"; };
+		200EA8701CF6FEF600097D48 /* DRShowTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRShowTitleView.m; sourceTree = "<group>"; };
 		201219691BDDC00A0052ED19 /* DoReading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoReading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2012196D1BDDC00A0052ED19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		201219781BDDC00A0052ED19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		201219821BDDC00A0052ED19 /* DoReadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoReadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		201219861BDDC00A0052ED19 /* DoReadingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoReadingTests.m; sourceTree = "<group>"; };
-		201219881BDDC00A0052ED19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2012198D1BDDC00A0052ED19 /* DoReadingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoReadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		201219911BDDC00A0052ED19 /* DoReadingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoReadingUITests.m; sourceTree = "<group>"; };
-		201219931BDDC00A0052ED19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201219A11BDDD06F0052ED19 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		201219A21BDDD06F0052ED19 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		201219A61BDDD0C00052ED19 /* DR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DR-Prefix.pch"; sourceTree = "<group>"; };
@@ -111,20 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2012197F1BDDC00A0052ED19 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2012198A1BDDC00A0052ED19 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -147,15 +117,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		200EA8691CF6FECB00097D48 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				200EA86A1CF6FECB00097D48 /* GlobalInfoModel.h */,
+				200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		200EA86E1CF6FEF600097D48 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				200EA86F1CF6FEF600097D48 /* DRShowTitleView.h */,
+				200EA8701CF6FEF600097D48 /* DRShowTitleView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		201219601BDDC00A0052ED19 = {
 			isa = PBXGroup;
 			children = (
 				2012196B1BDDC00A0052ED19 /* DoReading */,
-				201219851BDDC00A0052ED19 /* DoReadingTests */,
-				201219901BDDC00A0052ED19 /* DoReadingUITests */,
 				2012196A1BDDC00A0052ED19 /* Products */,
-				1EF74BF947FA92E114F18AFB /* Pods */,
 				04EE84CA587D6ED3817803DA /* Frameworks */,
+				1EF74BF947FA92E114F18AFB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				201219691BDDC00A0052ED19 /* DoReading.app */,
-				201219821BDDC00A0052ED19 /* DoReadingTests.xctest */,
-				2012198D1BDDC00A0052ED19 /* DoReadingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,9 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				201219A01BDDD0400052ED19 /* Application */,
-				201DA90B1C05B26200453605 /* SynthesizeCommon */,
 				201219A81BDDD1560052ED19 /* Modules */,
-				201219781BDDC00A0052ED19 /* Assets.xcassets */,
+				201DA90B1C05B26200453605 /* SynthesizeCommon */,
 				2012196C1BDDC00A0052ED19 /* Supporting Files */,
 			);
 			path = DoReading;
@@ -184,27 +167,10 @@
 		2012196C1BDDC00A0052ED19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				201219781BDDC00A0052ED19 /* Assets.xcassets */,
 				2012196D1BDDC00A0052ED19 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		201219851BDDC00A0052ED19 /* DoReadingTests */ = {
-			isa = PBXGroup;
-			children = (
-				201219861BDDC00A0052ED19 /* DoReadingTests.m */,
-				201219881BDDC00A0052ED19 /* Info.plist */,
-			);
-			path = DoReadingTests;
-			sourceTree = "<group>";
-		};
-		201219901BDDC00A0052ED19 /* DoReadingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				201219911BDDC00A0052ED19 /* DoReadingUITests.m */,
-				201219931BDDC00A0052ED19 /* Info.plist */,
-			);
-			path = DoReadingUITests;
 			sourceTree = "<group>";
 		};
 		201219A01BDDD0400052ED19 /* Application */ = {
@@ -214,6 +180,7 @@
 				201219A21BDDD06F0052ED19 /* AppDelegate.m */,
 				201219A61BDDD0C00052ED19 /* DR-Prefix.pch */,
 				201219A41BDDD0C00052ED19 /* Configuration */,
+				201DA9031C058F5C00453605 /* TabBarController */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -229,7 +196,6 @@
 		201219A81BDDD1560052ED19 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				201DA9031C058F5C00453605 /* TabBarController */,
 				201219A91BDDD1970052ED19 /* Home */,
 				201DA9071C05908300453605 /* GetBook */,
 			);
@@ -248,10 +214,14 @@
 		201DA9031C058F5C00453605 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				200EA8691CF6FECB00097D48 /* model */,
+				200EA8671CF6FECB00097D48 /* DRGlobalInfo.h */,
+				200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */,
 				201DA9041C058F7B00453605 /* DRTabBarController.h */,
 				201DA9051C058F7B00453605 /* DRTabBarController.m */,
 			);
-			path = TabBarController;
+			name = TabBarController;
+			path = ../Modules/TabBarController;
 			sourceTree = "<group>";
 		};
 		201DA9071C05908300453605 /* GetBook */ = {
@@ -259,6 +229,7 @@
 			children = (
 				201DA9081C0590E100453605 /* DRGetBookViewController.h */,
 				201DA9091C0590E100453605 /* DRGetBookViewController.m */,
+				200EA86E1CF6FEF600097D48 /* view */,
 			);
 			name = GetBook;
 			path = DoReading/Modules/GetBook;
@@ -391,42 +362,6 @@
 			productReference = 201219691BDDC00A0052ED19 /* DoReading.app */;
 			productType = "com.apple.product-type.application";
 		};
-		201219811BDDC00A0052ED19 /* DoReadingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 201219991BDDC00A0052ED19 /* Build configuration list for PBXNativeTarget "DoReadingTests" */;
-			buildPhases = (
-				2012197E1BDDC00A0052ED19 /* Sources */,
-				2012197F1BDDC00A0052ED19 /* Frameworks */,
-				201219801BDDC00A0052ED19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				201219841BDDC00A0052ED19 /* PBXTargetDependency */,
-			);
-			name = DoReadingTests;
-			productName = DoReadingTests;
-			productReference = 201219821BDDC00A0052ED19 /* DoReadingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2012198C1BDDC00A0052ED19 /* DoReadingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2012199C1BDDC00A0052ED19 /* Build configuration list for PBXNativeTarget "DoReadingUITests" */;
-			buildPhases = (
-				201219891BDDC00A0052ED19 /* Sources */,
-				2012198A1BDDC00A0052ED19 /* Frameworks */,
-				2012198B1BDDC00A0052ED19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2012198F1BDDC00A0052ED19 /* PBXTargetDependency */,
-			);
-			name = DoReadingUITests;
-			productName = DoReadingUITests;
-			productReference = 2012198D1BDDC00A0052ED19 /* DoReadingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -439,14 +374,6 @@
 					201219681BDDC00A0052ED19 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = WLV2SY57YT;
-					};
-					201219811BDDC00A0052ED19 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 201219681BDDC00A0052ED19;
-					};
-					2012198C1BDDC00A0052ED19 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 201219681BDDC00A0052ED19;
 					};
 				};
 			};
@@ -464,8 +391,6 @@
 			projectRoot = "";
 			targets = (
 				201219681BDDC00A0052ED19 /* DoReading */,
-				201219811BDDC00A0052ED19 /* DoReadingTests */,
-				2012198C1BDDC00A0052ED19 /* DoReadingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -476,20 +401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		201219801BDDC00A0052ED19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2012198B1BDDC00A0052ED19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,14 +461,17 @@
 			files = (
 				20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */,
 				202948281C168089003A02A4 /* DRReadBookViewController.m in Sources */,
+				200EA86C1CF6FECB00097D48 /* DRGlobalInfo.m in Sources */,
 				20E2F1FA1C18258400C763B2 /* DRBookSet.m in Sources */,
 				201DA91F1C05B26200453605 /* DownLogModel.m in Sources */,
 				201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */,
 				2027624E1C0856E4004E19CD /* BookModel.m in Sources */,
 				20484F4C1C0D4A1F00B1022D /* DRCollectionLayout.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
+				200EA86D1CF6FECB00097D48 /* GlobalInfoModel.m in Sources */,
 				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
 				20484F461C0D3DAB00B1022D /* DRBookDeskTopViewCell.m in Sources */,
+				200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */,
 				201DA91C1C05B26200453605 /* DownloadLog.m in Sources */,
 				201DA91D1C05B26200453605 /* FileDownloadManager.m in Sources */,
 				201DA9271C05B37800453605 /* BooksManager.m in Sources */,
@@ -568,36 +482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2012197E1BDDC00A0052ED19 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				201219871BDDC00A0052ED19 /* DoReadingTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		201219891BDDC00A0052ED19 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				201219921BDDC00A0052ED19 /* DoReadingUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		201219841BDDC00A0052ED19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 201219681BDDC00A0052ED19 /* DoReading */;
-			targetProxy = 201219831BDDC00A0052ED19 /* PBXContainerItemProxy */;
-		};
-		2012198F1BDDC00A0052ED19 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 201219681BDDC00A0052ED19 /* DoReading */;
-			targetProxy = 2012198E1BDDC00A0052ED19 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		201219941BDDC00A0052ED19 /* Debug */ = {
@@ -636,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
@@ -676,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
@@ -690,6 +575,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -706,7 +592,7 @@
 					"\"${PODS_ROOT}/Headers/Private/Mantle\"",
 				);
 				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -718,7 +604,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forhappy.doreading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "11a1a698-0641-4897-a199-3783a067be30";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -728,6 +614,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -744,7 +631,7 @@
 					"\"${PODS_ROOT}/Headers/Private/Mantle\"",
 				);
 				INFOPLIST_FILE = DoReading/Application/Configuration/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -756,55 +643,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.forhappy.doreading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "11a1a698-0641-4897-a199-3783a067be30";
-			};
-			name = Release;
-		};
-		2012199A1BDDC00A0052ED19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DoReadingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ForHappy.DoReadingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoReading.app/DoReading";
-			};
-			name = Debug;
-		};
-		2012199B1BDDC00A0052ED19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DoReadingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ForHappy.DoReadingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoReading.app/DoReading";
-			};
-			name = Release;
-		};
-		2012199D1BDDC00A0052ED19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DoReadingUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ForHappy.DoReadingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DoReading;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		2012199E1BDDC00A0052ED19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DoReadingUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ForHappy.DoReadingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = DoReading;
-				USES_XCTRUNNER = YES;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -825,24 +664,6 @@
 			buildConfigurations = (
 				201219971BDDC00A0052ED19 /* Debug */,
 				201219981BDDC00A0052ED19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		201219991BDDC00A0052ED19 /* Build configuration list for PBXNativeTarget "DoReadingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2012199A1BDDC00A0052ED19 /* Debug */,
-				2012199B1BDDC00A0052ED19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2012199C1BDDC00A0052ED19 /* Build configuration list for PBXNativeTarget "DoReadingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2012199D1BDDC00A0052ED19 /* Debug */,
-				2012199E1BDDC00A0052ED19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

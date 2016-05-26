@@ -57,7 +57,7 @@
     _bookLabel.numberOfLines = 0;
     _bookLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_bookLabel];
-
+    
     [self createBottomView];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting"] style:UIBarButtonItemStyleDone target:self action:@selector(settingItemClick:)];

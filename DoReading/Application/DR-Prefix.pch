@@ -28,6 +28,7 @@
 #import "MTLEXTScope.h"
 #import "EXTKeyPathCoding.h"
 
+#import "DRGlobalInfo.h"
 
 //自写公用库
 #import "DownLoadAlertViewController.h"

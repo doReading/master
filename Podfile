@@ -1,5 +1,5 @@
 source 'https://gitcafe.com/akuandev/Specs.git'
-platform :ios, '8.0'
+platform :ios, '7.0'
 xcodeproj 'DoReading'
 use_frameworks!
 pod 'Masonry', '~> 0.5.3'

@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.tabBar.translucent = NO;
     
     DRHomeViewController *homeVc = [[DRHomeViewController alloc] init];
     homeVc.title = @"读";

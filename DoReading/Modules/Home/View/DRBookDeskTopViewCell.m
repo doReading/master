@@ -31,12 +31,15 @@
     _titleLabel = [[UILabel alloc] init];
     [self.contentView addSubview:_titleLabel];
     _titleLabel.textColor = [UIColor blackColor];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
     _titleLabel.numberOfLines = 3;
+    _titleLabel.adjustsFontSizeToFitWidth = YES;
+    _titleLabel.minimumScaleFactor = 10.f;
     _titleLabel.font = [UIFont systemFontOfSize:16.f];
     @weakify(self);
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
-        make.centerX.equalTo(self.contentView);
+        make.width.equalTo(self.contentView);
         make.top.equalTo(self.contentView).offset(5);
     }];
     

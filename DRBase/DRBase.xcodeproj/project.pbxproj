@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200EA8741CF7065C00097D48 /* NSString+stringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8731CF7065C00097D48 /* NSString+stringSize.m */; };
 		201DA8B01C055FCA00453605 /* DRBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA8AF1C055FCA00453605 /* DRBase.m */; };
 		201DA8C21C05652500453605 /* DRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA8BD1C05632B00453605 /* DRNavigationController.m */; };
-		201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92C1C05BC2400453605 /* NSString+grep.m */; settings = {ASSET_TAGS = (); }; };
-		201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92F1C05BC8A00453605 /* UIView+indicator.m */; settings = {ASSET_TAGS = (); }; };
-		2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624A1C084925004E19CD /* DRBaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DB1C1196C700030046 /* UILabel+DRFactory.m */; settings = {ASSET_TAGS = (); }; };
-		203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DE1C11990300030046 /* UITextField+DRFactory.m */; settings = {ASSET_TAGS = (); }; };
+		201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92C1C05BC2400453605 /* NSString+grep.m */; };
+		201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92F1C05BC8A00453605 /* UIView+indicator.m */; };
+		2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624A1C084925004E19CD /* DRBaseViewController.m */; };
+		203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DB1C1196C700030046 /* UILabel+DRFactory.m */; };
+		203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DE1C11990300030046 /* UITextField+DRFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200EA8721CF7065C00097D48 /* NSString+stringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+stringSize.h"; sourceTree = "<group>"; };
+		200EA8731CF7065C00097D48 /* NSString+stringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+stringSize.m"; sourceTree = "<group>"; };
 		201DA8AA1C055FCA00453605 /* libDRBase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDRBase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		201DA8AD1C055FCA00453605 /* DRBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBase.h; sourceTree = "<group>"; };
 		201DA8AF1C055FCA00453605 /* DRBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBase.m; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 		201DA8C61C0589ED00453605 /* CommonLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				200EA8721CF7065C00097D48 /* NSString+stringSize.h */,
+				200EA8731CF7065C00097D48 /* NSString+stringSize.m */,
 				201DA92B1C05BC2400453605 /* NSString+grep.h */,
 				201DA92C1C05BC2400453605 /* NSString+grep.m */,
 				201DA92E1C05BC8A00453605 /* UIView+indicator.h */,
@@ -170,6 +175,7 @@
 				201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */,
 				203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */,
 				2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */,
+				200EA8741CF7065C00097D48 /* NSString+stringSize.m in Sources */,
 				203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */,
 				201DA8B01C055FCA00453605 /* DRBase.m in Sources */,
 			);
@@ -213,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -249,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

@@ -18,9 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //初始化全局变量
+    [[DRGlobalInfo sharedInstance] initBaseInfo];
     //初始化下载日志
     [DownloadLog sharedInstance];
-//    //初始化本地书籍管理器
+    //初始化本地书籍管理器
     [BooksManager instanceSignalManager];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
