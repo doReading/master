@@ -7,14 +7,15 @@
 //
 //此项目为本人所写的基础视图及控制器和类别等
 
-#import <Foundation/Foundation.h>
 
 #import "NSString+stringSize.h"
 #import "NSString+grep.h"
+#import "NSDictionary+containKeyOrValue.h"
 #import "UIView+indicator.h"
 #import "UILabel+DRFactory.h"
 #import "UITextField+DRFactory.h"
 #import "DRNavigationController.h"
+#import "DRBaseTableViewController.h"
 #import "DRBaseViewController.h"
 
 @interface DRBase : NSObject

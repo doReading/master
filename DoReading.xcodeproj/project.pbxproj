@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E53B9B7EF5F355E01861503 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E62020796F41A3C4FE0375D /* Pods.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		200EA86C1CF6FECB00097D48 /* DRGlobalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */; };
 		200EA86D1CF6FECB00097D48 /* GlobalInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */; };
 		200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8701CF6FEF600097D48 /* DRShowTitleView.m */; };
 		2012196E1BDDC00A0052ED19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2012196D1BDDC00A0052ED19 /* main.m */; };
 		201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201219781BDDC00A0052ED19 /* Assets.xcassets */; };
 		201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201219A21BDDD06F0052ED19 /* AppDelegate.m */; };
-		201DA8911C054E0D00453605 /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8901C054E0D00453605 /* libDRLibrary.a */; };
-		201DA8B71C05601600453605 /* libDRBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201DA8B61C05601600453605 /* libDRBase.a */; };
 		201DA9061C058F7B00453605 /* DRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9051C058F7B00453605 /* DRTabBarController.m */; };
 		201DA90A1C0590E100453605 /* DRGetBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9091C0590E100453605 /* DRGetBookViewController.m */; };
 		201DA91B1C05B26200453605 /* DownLoadAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA90F1C05B26200453605 /* DownLoadAlertViewController.m */; };
@@ -25,16 +22,18 @@
 		201DA91F1C05B26200453605 /* DownLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA91A1C05B26200453605 /* DownLogModel.m */; };
 		201DA9271C05B37800453605 /* BooksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA9261C05B37800453605 /* BooksManager.m */; };
 		2027624E1C0856E4004E19CD /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624D1C0856E4004E19CD /* BookModel.m */; };
+		2028305C1CF7EF9E00472132 /* DRSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2028305B1CF7EF9E00472132 /* DRSetViewController.m */; };
 		202948281C168089003A02A4 /* DRReadBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 202948271C168089003A02A4 /* DRReadBookViewController.m */; };
 		20484F461C0D3DAB00B1022D /* DRBookDeskTopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20484F451C0D3DAB00B1022D /* DRBookDeskTopViewCell.m */; };
 		20484F4C1C0D4A1F00B1022D /* DRCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20484F4B1C0D4A1F00B1022D /* DRCollectionLayout.m */; };
+		20988FF51CF81F3000E810B5 /* libDRBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FF31CF81F3000E810B5 /* libDRBase.a */; };
+		20988FF81CF81F5400E810B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FF71CF81F5400E810B5 /* Pods.framework */; };
 		20E2F1FA1C18258400C763B2 /* DRBookSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E2F1F91C18258400C763B2 /* DRBookSet.m */; };
 		20F148BC1C0C00E700EBE4C5 /* DRAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F148B81C0C00E700EBE4C5 /* DRAddLocationViewController.m */; };
 		20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F148BA1C0C00E700EBE4C5 /* DRHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E62020796F41A3C4FE0375D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F8AD86294916847D3413D33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		200EA8671CF6FECB00097D48 /* DRGlobalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGlobalInfo.h; sourceTree = "<group>"; };
 		200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGlobalInfo.m; sourceTree = "<group>"; };
@@ -49,8 +48,6 @@
 		201219A21BDDD06F0052ED19 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		201219A61BDDD0C00052ED19 /* DR-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DR-Prefix.pch"; sourceTree = "<group>"; };
 		201219AD1BDDD4970052ED19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		201DA8901C054E0D00453605 /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "DRLibrary/build/Debug-iphoneos/libDRLibrary.a"; sourceTree = "<group>"; };
-		201DA8B61C05601600453605 /* libDRBase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRBase.a; path = "DRBase/build/Debug-iphoneos/libDRBase.a"; sourceTree = "<group>"; };
 		201DA9041C058F7B00453605 /* DRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTabBarController.h; sourceTree = "<group>"; };
 		201DA9051C058F7B00453605 /* DRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTabBarController.m; sourceTree = "<group>"; };
 		201DA9081C0590E100453605 /* DRGetBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGetBookViewController.h; sourceTree = "<group>"; };
@@ -69,12 +66,17 @@
 		201DA9261C05B37800453605 /* BooksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BooksManager.m; sourceTree = "<group>"; };
 		2027624C1C0856E4004E19CD /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
 		2027624D1C0856E4004E19CD /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		2028305A1CF7EF9E00472132 /* DRSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSetViewController.h; sourceTree = "<group>"; };
+		2028305B1CF7EF9E00472132 /* DRSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSetViewController.m; sourceTree = "<group>"; };
 		202948261C168089003A02A4 /* DRReadBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRReadBookViewController.h; sourceTree = "<group>"; };
 		202948271C168089003A02A4 /* DRReadBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRReadBookViewController.m; sourceTree = "<group>"; };
 		20484F441C0D3DAB00B1022D /* DRBookDeskTopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookDeskTopViewCell.h; sourceTree = "<group>"; };
 		20484F451C0D3DAB00B1022D /* DRBookDeskTopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookDeskTopViewCell.m; sourceTree = "<group>"; };
 		20484F4A1C0D4A1F00B1022D /* DRCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRCollectionLayout.h; sourceTree = "<group>"; };
 		20484F4B1C0D4A1F00B1022D /* DRCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRCollectionLayout.m; sourceTree = "<group>"; };
+		20988FF31CF81F3000E810B5 /* libDRBase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRBase.a; path = "Build/Products/Debug-iphonesimulator/libDRBase.a"; sourceTree = "<group>"; };
+		20988FF41CF81F3000E810B5 /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "Build/Products/Debug-iphonesimulator/libDRLibrary.a"; sourceTree = "<group>"; };
+		20988FF71CF81F5400E810B5 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Build/Products/Debug-iphonesimulator/Pods.framework"; sourceTree = "<group>"; };
 		20E2F1F81C18258400C763B2 /* DRBookSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSet.h; sourceTree = "<group>"; };
 		20E2F1F91C18258400C763B2 /* DRBookSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSet.m; sourceTree = "<group>"; };
 		20F148B71C0C00E700EBE4C5 /* DRAddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRAddLocationViewController.h; sourceTree = "<group>"; };
@@ -89,9 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201DA8B71C05601600453605 /* libDRBase.a in Frameworks */,
-				201DA8911C054E0D00453605 /* libDRLibrary.a in Frameworks */,
-				1E53B9B7EF5F355E01861503 /* Pods.framework in Frameworks */,
+				20988FF81CF81F5400E810B5 /* Pods.framework in Frameworks */,
+				20988FF51CF81F3000E810B5 /* libDRBase.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +102,9 @@
 		04EE84CA587D6ED3817803DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				201DA8B61C05601600453605 /* libDRBase.a */,
-				201DA8901C054E0D00453605 /* libDRLibrary.a */,
-				0E62020796F41A3C4FE0375D /* Pods.framework */,
+				20988FF71CF81F5400E810B5 /* Pods.framework */,
+				20988FF31CF81F3000E810B5 /* libDRBase.a */,
+				20988FF41CF81F3000E810B5 /* libDRLibrary.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,6 +230,8 @@
 			children = (
 				201DA9081C0590E100453605 /* DRGetBookViewController.h */,
 				201DA9091C0590E100453605 /* DRGetBookViewController.m */,
+				2028305A1CF7EF9E00472132 /* DRSetViewController.h */,
+				2028305B1CF7EF9E00472132 /* DRSetViewController.m */,
 				200EA86E1CF6FEF600097D48 /* view */,
 			);
 			name = GetBook;
@@ -466,6 +469,7 @@
 				201DA91F1C05B26200453605 /* DownLogModel.m in Sources */,
 				201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */,
 				2027624E1C0856E4004E19CD /* BookModel.m in Sources */,
+				2028305C1CF7EF9E00472132 /* DRSetViewController.m in Sources */,
 				20484F4C1C0D4A1F00B1022D /* DRCollectionLayout.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
 				200EA86D1CF6FECB00097D48 /* GlobalInfoModel.m in Sources */,
@@ -581,6 +585,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Application/DR-Prefix.pch";
@@ -596,7 +601,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -620,6 +625,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/Application/DR-Prefix.pch";
@@ -635,7 +641,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

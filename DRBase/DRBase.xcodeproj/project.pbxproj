@@ -13,8 +13,12 @@
 		201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92C1C05BC2400453605 /* NSString+grep.m */; };
 		201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 201DA92F1C05BC8A00453605 /* UIView+indicator.m */; };
 		2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624A1C084925004E19CD /* DRBaseViewController.m */; };
+		202830591CF7DE7800472132 /* NSDictionary+containKeyOrValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 202830581CF7DE7800472132 /* NSDictionary+containKeyOrValue.m */; };
+		2028305F1CF7F0D500472132 /* DRBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2028305E1CF7F0D500472132 /* DRBaseTableViewController.m */; };
 		203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DB1C1196C700030046 /* UILabel+DRFactory.m */; };
 		203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DE1C11990300030046 /* UITextField+DRFactory.m */; };
+		20988FFA1CF81FA600E810B5 /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FF91CF81FA600E810B5 /* libDRLibrary.a */; };
+		20988FFC1CF81FA900E810B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FFB1CF81FA900E810B5 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +37,16 @@
 		201DA92F1C05BC8A00453605 /* UIView+indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+indicator.m"; sourceTree = "<group>"; };
 		202762491C084925004E19CD /* DRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBaseViewController.h; sourceTree = "<group>"; };
 		2027624A1C084925004E19CD /* DRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBaseViewController.m; sourceTree = "<group>"; };
+		202830571CF7DE7800472132 /* NSDictionary+containKeyOrValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+containKeyOrValue.h"; sourceTree = "<group>"; };
+		202830581CF7DE7800472132 /* NSDictionary+containKeyOrValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+containKeyOrValue.m"; sourceTree = "<group>"; };
+		2028305D1CF7F0D500472132 /* DRBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBaseTableViewController.h; sourceTree = "<group>"; };
+		2028305E1CF7F0D500472132 /* DRBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBaseTableViewController.m; sourceTree = "<group>"; };
 		203D85DA1C1196C700030046 /* UILabel+DRFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DRFactory.h"; sourceTree = "<group>"; };
 		203D85DB1C1196C700030046 /* UILabel+DRFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DRFactory.m"; sourceTree = "<group>"; };
 		203D85DD1C11990300030046 /* UITextField+DRFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DRFactory.h"; sourceTree = "<group>"; };
 		203D85DE1C11990300030046 /* UITextField+DRFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DRFactory.m"; sourceTree = "<group>"; };
+		20988FF91CF81FA600E810B5 /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "../Build/Products/Debug-iphonesimulator/libDRLibrary.a"; sourceTree = "<group>"; };
+		20988FFB1CF81FA900E810B5 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "../Build/Products/Debug-iphonesimulator/Pods.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20988FFC1CF81FA900E810B5 /* Pods.framework in Frameworks */,
+				20988FFA1CF81FA600E810B5 /* libDRLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +65,7 @@
 		201DA8A11C055FCA00453605 = {
 			isa = PBXGroup;
 			children = (
+				20988FF21CF818F400E810B5 /* Framework */,
 				201DA8AC1C055FCA00453605 /* DRBase */,
 				201DA8AB1C055FCA00453605 /* Products */,
 			);
@@ -85,6 +98,8 @@
 			children = (
 				201DA8BC1C05632B00453605 /* DRNavigationController.h */,
 				201DA8BD1C05632B00453605 /* DRNavigationController.m */,
+				2028305D1CF7F0D500472132 /* DRBaseTableViewController.h */,
+				2028305E1CF7F0D500472132 /* DRBaseTableViewController.m */,
 				202762491C084925004E19CD /* DRBaseViewController.h */,
 				2027624A1C084925004E19CD /* DRBaseViewController.m */,
 			);
@@ -105,6 +120,8 @@
 				200EA8731CF7065C00097D48 /* NSString+stringSize.m */,
 				201DA92B1C05BC2400453605 /* NSString+grep.h */,
 				201DA92C1C05BC2400453605 /* NSString+grep.m */,
+				202830571CF7DE7800472132 /* NSDictionary+containKeyOrValue.h */,
+				202830581CF7DE7800472132 /* NSDictionary+containKeyOrValue.m */,
 				201DA92E1C05BC8A00453605 /* UIView+indicator.h */,
 				201DA92F1C05BC8A00453605 /* UIView+indicator.m */,
 				203D85DA1C1196C700030046 /* UILabel+DRFactory.h */,
@@ -113,6 +130,15 @@
 				203D85DE1C11990300030046 /* UITextField+DRFactory.m */,
 			);
 			path = CommonLibrary;
+			sourceTree = "<group>";
+		};
+		20988FF21CF818F400E810B5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				20988FFB1CF81FA900E810B5 /* Pods.framework */,
+				20988FF91CF81FA600E810B5 /* libDRLibrary.a */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +200,11 @@
 				201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */,
 				201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */,
 				203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */,
+				2028305F1CF7F0D500472132 /* DRBaseTableViewController.m in Sources */,
 				2027624B1C084925004E19CD /* DRBaseViewController.m in Sources */,
 				200EA8741CF7065C00097D48 /* NSString+stringSize.m in Sources */,
 				203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */,
+				202830591CF7DE7800472132 /* NSDictionary+containKeyOrValue.m in Sources */,
 				201DA8B01C055FCA00453605 /* DRBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +293,23 @@
 		201DA8B41C055FCA00453605 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				DRLibrary_SRCROOT = "$(SRCROOT)/../DRLibrary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/DRBase-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DRLibrary_SRCROOT)/DRLibrary",
+					"\"${PODS_ROOT}/Headers/Private/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Private/AFNetworking\"",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				PODS_ROOT = "$(SRCROOT)/../Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -277,10 +318,23 @@
 		201DA8B51C055FCA00453605 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				DRLibrary_SRCROOT = "$(SRCROOT)/../DRLibrary";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(BUILT_PRODUCTS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/DRBase-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DRLibrary_SRCROOT)/DRLibrary",
+					"\"${PODS_ROOT}/Headers/Private/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Private/AFNetworking\"",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				PODS_ROOT = "$(SRCROOT)/../Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

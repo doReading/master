@@ -40,25 +40,64 @@ IMP_SINGLETON(DRGlobalInfo)
         }
     }else {
         self.globalModel = [GlobalInfoModel new];
+        self.globalModel.bookWebList = [NSMutableDictionary dictionary];
     }
     
-    if(self.globalModel.bookWebList.count == 0) {
-        BookWebInfoModel *model = [BookWebInfoModel new];
-        model.baseUrl = @"http://www.qingkan520.com/";
-        model.param1 = @"book/";
-        model.param2 = @"txt.html";
-        self.globalModel.bookWebList = [NSMutableArray arrayWithObject:model];
+    BookWebInfoModel *model = [BookWebInfoModel new];
+    model.webName = @"qingkan";
+    model.baseUrl = @"http://www.qingkan520.com/";
+    model.param1 = @"book/";
+    model.variableParam = @"";
+    model.param2 = @"txt.html";
+    
+    BOOL store = NO;
+    if (self.globalModel.defaultBookWeb == nil) {
+        self.globalModel.defaultBookWeb = model;
+        store = YES;
+    }
+    if(![self.globalModel.bookWebList containKey:model.webName]) {
+        [self.globalModel.bookWebList setObject:model forKey:model.webName];
+        store = YES;
+    }
+    
+    if (store) {
+        [self storeGeneralInfo];
     }
 }
 
-- (NSMutableArray *)bookWebList
+- (NSMutableDictionary *)bookWebList
 {
     return self.globalModel.bookWebList;
 }
 
-- (void)setBookWebList:(NSMutableArray *)bookWebList
+- (void)setBookWebList:(NSMutableDictionary *)bookWebList
 {
     self.globalModel.bookWebList = bookWebList;
+    [self storeGeneralInfo];
+}
+
+- (BookWebInfoModel *)defaultBookWeb
+{
+    return self.globalModel.defaultBookWeb;
+}
+
+-(void)setDefaultBookWeb:(BookWebInfoModel *)defaultBookWeb
+{
+    self.globalModel.defaultBookWeb = defaultBookWeb;
+    [self storeGeneralInfo];
+}
+
+- (void)storeGeneralInfo
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if (self.globalModel) {
+            NSError *error = nil;
+            NSDictionary *dict = [MTLJSONAdapter JSONDictionaryFromModel:self.globalModel error:&error];
+            if (!error) {
+                [dict writeToURL:[NSURL fileURLWithPath:self.globalDir] atomically:YES];
+            }
+        }
+    });
 }
 
 @end

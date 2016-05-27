@@ -6,9 +6,12 @@
 //  Copyright © 2016年 ForHappy. All rights reserved.
 //
 
+@class BookWebInfoModel;
+
 @interface DRGlobalInfo : NSObject
 
-@property (nonatomic, strong) NSMutableArray *bookWebList;
+@property (nonatomic, strong) NSMutableDictionary *bookWebList;
+@property (nonatomic, strong) BookWebInfoModel *defaultBookWeb;
 
 + (DRGlobalInfo *)sharedInstance;
 

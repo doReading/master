@@ -8,6 +8,7 @@
 
 #import "DRGetBookViewController.h"
 #import "DRShowTitleView.h"
+#import "DRSetViewController.h"
 
 @interface DRGetBookViewController ()<UIWebViewDelegate>
 
@@ -78,7 +79,7 @@
 
 - (void)rightItemClick
 {
-    
+    [self.navigationController pushViewController:[DRSetViewController new] animated:YES];
 }
 
 /*
@@ -228,7 +229,7 @@
 {
     [self.webView goForward];
 }
-
+*/
 #pragma mark - shouldDoForKeyBoard
 
 -(void)shouldDoForKeyBoardWillShow:(CGFloat)height
@@ -240,5 +241,5 @@
 {
     [self.alertDownView downWhenKeyboardHide:height];
 }
-*/
+
 @end

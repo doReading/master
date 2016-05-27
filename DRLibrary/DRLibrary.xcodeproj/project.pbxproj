@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		203A4AED1BE2291600DB6F4E /* DRLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A4AEC1BE2291600DB6F4E /* DRLibrary.m */; };
 		203A4AF61BE2297300DB6F4E /* CFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A4AF51BE2294A00DB6F4E /* CFileHandle.m */; };
+		20988FFE1CF8202B00E810B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FFD1CF8202B00E810B5 /* UIKit.framework */; };
+		209890001CF8204600E810B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FFF1CF8204600E810B5 /* Foundation.framework */; };
+		209890021CF8217200E810B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 209890011CF8217200E810B5 /* CoreGraphics.framework */; };
 		20DA904E1BE74E6700679210 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DA904D1BE74E2E00679210 /* UIViewAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
@@ -18,6 +21,9 @@
 		203A4AEC1BE2291600DB6F4E /* DRLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRLibrary.m; sourceTree = "<group>"; };
 		203A4AF41BE2294A00DB6F4E /* CFileHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFileHandle.h; sourceTree = "<group>"; };
 		203A4AF51BE2294A00DB6F4E /* CFileHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFileHandle.m; sourceTree = "<group>"; };
+		20988FFD1CF8202B00E810B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		20988FFF1CF8204600E810B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		209890011CF8217200E810B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		20DA904C1BE74E2E00679210 /* UIViewAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
 		20DA904D1BE74E2E00679210 /* UIViewAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -27,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209890021CF8217200E810B5 /* CoreGraphics.framework in Frameworks */,
+				209890001CF8204600E810B5 /* Foundation.framework in Frameworks */,
+				20988FFE1CF8202B00E810B5 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +82,9 @@
 		206D2BAD1C04137600EE3E4C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				209890011CF8217200E810B5 /* CoreGraphics.framework */,
+				20988FFF1CF8204600E810B5 /* Foundation.framework */,
+				20988FFD1CF8202B00E810B5 /* UIKit.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -234,11 +246,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DRLibrary/",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				LD_MAP_FILE_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
@@ -252,11 +262,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/DRLibrary/",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				LD_MAP_FILE_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_PATHS = "";
