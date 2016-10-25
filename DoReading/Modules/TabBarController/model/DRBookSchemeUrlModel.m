@@ -1,14 +1,14 @@
 //
-//  GlobalInfoModel.m
+//  DRBookSchemeUrlModel.m
 //  DoReading
 //
 //  Created by Wang Huiguang on 16/5/26.
 //  Copyright © 2016年 ForHappy. All rights reserved.
 //
 
-#import "GlobalInfoModel.h"
+#import "DRBookSchemeUrlModel.h"
 
-@implementation GlobalInfoModel
+@implementation DRBookSchemeUrlModel
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {

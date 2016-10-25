@@ -8,7 +8,9 @@
 
 #import "BooksManager.h"
 
-@interface BooksManager()
+@interface BooksManager(){
+    OSSpinLock _storeLock;
+}
 
 @property (nonatomic, copy, readonly) NSString *bookStoreDirectory;
 
@@ -20,15 +22,13 @@
 //真实
 @property (nonatomic, strong) NSMutableDictionary *booksLogDict;
 
-@property (nonatomic, strong) NSLock *lock;
-
 @end
 
 @implementation BooksManager
 
 - (instancetype)instance
 {
-    self.lock = [[NSLock alloc] init];
+    _storeLock = OS_SPINLOCK_INIT;
     
     NSArray *arr = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
@@ -278,9 +278,9 @@
                 }
                 
                 if (writeLog.count > 0) {
-                    [self.lock lock];
+                    OSSpinLockLock(&_storeLock);
                     [writeLog writeToFile:path atomically:YES];
-                    [self.lock unlock];
+                    OSSpinLockUnlock(&_storeLock);
                 }
             }
         }

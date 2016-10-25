@@ -22,3 +22,18 @@
 }
 
 @end
+
+@implementation NSMutableDictionary (safety)
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{}
+
+- (void)DRSetObject:(id)anObject forKey:(id<NSCopying>)aKey
+{
+    if (anObject == nil) {
+        return;
+    }else {
+        [self setObject:anObject forKey:aKey];
+    }
+}
+
+@end

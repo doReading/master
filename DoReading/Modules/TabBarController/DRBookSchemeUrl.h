@@ -1,5 +1,5 @@
 //
-//  DRGlobalInfo.h
+//  DRBookSchemeUrl.h
 //  DoReading
 //
 //  Created by Wang Huiguang on 16/5/26.
@@ -8,12 +8,12 @@
 
 @class BookWebInfoModel;
 
-@interface DRGlobalInfo : NSObject
+@interface DRBookSchemeUrl : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *bookWebList;
 @property (nonatomic, strong) BookWebInfoModel *defaultBookWeb;
 
-+ (DRGlobalInfo *)sharedInstance;
++ (DRBookSchemeUrl *)sharedInstance;
 
 - (void)initBaseInfo;
 

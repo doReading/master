@@ -13,6 +13,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
+#import <libkern/OSAtomic.h>
 
 //通过pods添加的三方库
 #import "Masonry.h"
@@ -30,7 +31,7 @@
 #import "DownLoadAlertViewController.h"
 #import "BooksManager.h"
 
-#import "DRGlobalInfo.h"
+#import "DRBookSchemeUrl.h"
 
 #ifndef __OPTIMIZE__
 #define NSLog(...) NSLog(__VA_ARGS__)

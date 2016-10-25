@@ -1,5 +1,5 @@
 //
-//  GlobalInfoModel.h
+//  DRBookSchemeUrlModel.h
 //  DoReading
 //
 //  Created by Wang Huiguang on 16/5/26.
@@ -10,7 +10,7 @@
 @class BookWebInfoModel;
 
 //全局变量
-@interface GlobalInfoModel : MTLModel<MTLJSONSerializing>
+@interface DRBookSchemeUrlModel : MTLModel<MTLJSONSerializing>
 
 @property (nonatomic, strong) NSMutableDictionary *bookWebList;
 

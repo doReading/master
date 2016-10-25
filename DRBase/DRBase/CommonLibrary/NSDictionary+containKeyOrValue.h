@@ -14,3 +14,9 @@
 - (BOOL)containValue:(id)value;
 
 @end
+
+@interface NSMutableDictionary (safety)
+
+- (void)DRSetObject:(id)anObject forKey:(id<NSCopying>)aKey;
+
+@end

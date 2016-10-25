@@ -22,6 +22,8 @@ cs = [[_class alloc] init];\
 return cs;\
 }
 
+#define share(class) [class sharedInstance]
+
 //系统版本判断
 #define IS_OS_6_OR_EARLIER         ([[[UIDevice currentDevice] systemVersion] floatValue] < 6.99)
 #define IS_OS_7_OR_EARLIER         ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.99)

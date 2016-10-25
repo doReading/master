@@ -11,9 +11,10 @@
 
 #define THREAD_STORE_FLAG 0
 
-@interface DownloadLog()
+@interface DownloadLog(){
+    OSSpinLock _storeLock;
+}
 
-@property (nonatomic, strong) NSLock *lock;
 
 @property (nonatomic, copy) NSString *downHistoryDirectory;
 //下载日志
@@ -33,7 +34,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.lock = [[NSLock alloc] init];
+        _storeLock = OS_SPINLOCK_INIT;
         
         _downHistoryPath = [self.downHistoryDirectory stringByAppendingString:@"/downLog"];
 
@@ -189,9 +190,9 @@
                 }
                 
                 if (writeLog.count > 0) {
-                    [self.lock lock];
+                    OSSpinLockLock(&_storeLock);
                     [writeLog writeToURL:[NSURL fileURLWithPath:self.downHistoryPath] atomically:YES];
-                    [self.lock unlock];
+                    OSSpinLockUnlock(&_storeLock);
                 }
             }
         }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200EA86C1CF6FECB00097D48 /* DRGlobalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */; };
-		200EA86D1CF6FECB00097D48 /* GlobalInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */; };
+		200EA86C1CF6FECB00097D48 /* DRBookSchemeUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8681CF6FECB00097D48 /* DRBookSchemeUrl.m */; };
+		200EA86D1CF6FECB00097D48 /* DRBookSchemeUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA86B1CF6FECB00097D48 /* DRBookSchemeUrlModel.m */; };
 		200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8701CF6FEF600097D48 /* DRShowTitleView.m */; };
 		2012196E1BDDC00A0052ED19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2012196D1BDDC00A0052ED19 /* main.m */; };
 		201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201219781BDDC00A0052ED19 /* Assets.xcassets */; };
@@ -35,10 +35,10 @@
 
 /* Begin PBXFileReference section */
 		0F8AD86294916847D3413D33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		200EA8671CF6FECB00097D48 /* DRGlobalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRGlobalInfo.h; sourceTree = "<group>"; };
-		200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRGlobalInfo.m; sourceTree = "<group>"; };
-		200EA86A1CF6FECB00097D48 /* GlobalInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalInfoModel.h; sourceTree = "<group>"; };
-		200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalInfoModel.m; sourceTree = "<group>"; };
+		200EA8671CF6FECB00097D48 /* DRBookSchemeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSchemeUrl.h; sourceTree = "<group>"; };
+		200EA8681CF6FECB00097D48 /* DRBookSchemeUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSchemeUrl.m; sourceTree = "<group>"; };
+		200EA86A1CF6FECB00097D48 /* DRBookSchemeUrlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSchemeUrlModel.h; sourceTree = "<group>"; };
+		200EA86B1CF6FECB00097D48 /* DRBookSchemeUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSchemeUrlModel.m; sourceTree = "<group>"; };
 		200EA86F1CF6FEF600097D48 /* DRShowTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRShowTitleView.h; sourceTree = "<group>"; };
 		200EA8701CF6FEF600097D48 /* DRShowTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRShowTitleView.m; sourceTree = "<group>"; };
 		201219691BDDC00A0052ED19 /* DoReading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoReading.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,8 +121,8 @@
 		200EA8691CF6FECB00097D48 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				200EA86A1CF6FECB00097D48 /* GlobalInfoModel.h */,
-				200EA86B1CF6FECB00097D48 /* GlobalInfoModel.m */,
+				200EA86A1CF6FECB00097D48 /* DRBookSchemeUrlModel.h */,
+				200EA86B1CF6FECB00097D48 /* DRBookSchemeUrlModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -216,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				200EA8691CF6FECB00097D48 /* model */,
-				200EA8671CF6FECB00097D48 /* DRGlobalInfo.h */,
-				200EA8681CF6FECB00097D48 /* DRGlobalInfo.m */,
+				200EA8671CF6FECB00097D48 /* DRBookSchemeUrl.h */,
+				200EA8681CF6FECB00097D48 /* DRBookSchemeUrl.m */,
 				201DA9041C058F7B00453605 /* DRTabBarController.h */,
 				201DA9051C058F7B00453605 /* DRTabBarController.m */,
 			);
@@ -464,7 +464,7 @@
 			files = (
 				20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */,
 				202948281C168089003A02A4 /* DRReadBookViewController.m in Sources */,
-				200EA86C1CF6FECB00097D48 /* DRGlobalInfo.m in Sources */,
+				200EA86C1CF6FECB00097D48 /* DRBookSchemeUrl.m in Sources */,
 				20E2F1FA1C18258400C763B2 /* DRBookSet.m in Sources */,
 				201DA91F1C05B26200453605 /* DownLogModel.m in Sources */,
 				201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */,
@@ -472,7 +472,7 @@
 				2028305C1CF7EF9E00472132 /* DRSetViewController.m in Sources */,
 				20484F4C1C0D4A1F00B1022D /* DRCollectionLayout.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
-				200EA86D1CF6FECB00097D48 /* GlobalInfoModel.m in Sources */,
+				200EA86D1CF6FECB00097D48 /* DRBookSchemeUrlModel.m in Sources */,
 				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
 				20484F461C0D3DAB00B1022D /* DRBookDeskTopViewCell.m in Sources */,
 				200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */,
@@ -582,6 +582,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WLV2SY57YT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",
@@ -622,6 +623,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WLV2SY57YT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)",

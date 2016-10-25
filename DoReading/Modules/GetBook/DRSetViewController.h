@@ -10,4 +10,8 @@
 
 @interface DRSetViewController : DRBaseTableViewController
 
+@property (nonatomic, copy) void(^setBookSchemeUrlBlock)(NSString *urlStr);
+
+@property (nonatomic, copy) NSString *bookSchemeUrl;
+
 @end

@@ -30,18 +30,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.keyBoardWillShow = YES;
-//    
-//    NSString *str = @"http://www.qingkan520.com";
-//    CGRect rect = self.view.bounds;
-//    rect.size.height -= 30.f;
-//    _webView = [[UIWebView alloc] initWithFrame:rect];
-//    
-//    [self.view addSubview:_webView];
-//    _webView.delegate = self;
-//    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:str]];
-//    [_webView loadRequest:request];
-//    
+    self.keyBoardWillShow = YES;
+
+    _webView = [UIWebView new];
+    _webView.delegate = self;
+    [self.view addSubview:_webView];
+    
+    @weakify(self);
+    [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self);
+        make.edges.equalTo(self.view);
+    }];
+
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"主页" style:UIBarButtonItemStyleDone target:self action:@selector(homeItemClick)];
 //    
 //    UIView *bootomView = [self createBottomView];
@@ -57,6 +57,15 @@
     
     [self createTitleView];
     [self createRightItem];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    if (self.currentRequestString.length > 0) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.currentRequestString]]];
+    }
 }
 
 - (void)createTitleView
@@ -79,7 +88,17 @@
 
 - (void)rightItemClick
 {
-    [self.navigationController pushViewController:[DRSetViewController new] animated:YES];
+    DRSetViewController *setVc = [DRSetViewController new];
+    __block id weakSelf = self;
+    setVc.setBookSchemeUrlBlock = ^(NSString *urlStr) {
+        [weakSelf setBookSchemeUrl:urlStr];
+    };
+    [self.navigationController pushViewController:setVc animated:YES];
+}
+
+- (void)setBookSchemeUrl:(NSString *)urlStr
+{
+    self.currentRequestString = urlStr;
 }
 
 /*
