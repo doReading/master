@@ -45,7 +45,7 @@
     
     _sizeLabel = [[UILabel alloc] init];
     [self.contentView addSubview:_sizeLabel];
-    _sizeLabel.textColor = COLOR_LIGHT;
+    _sizeLabel.textColor = DR_COLOR_CODE(@"#254a64");
     _sizeLabel.font = [UIFont systemFontOfSize:10.f];
     [_sizeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);

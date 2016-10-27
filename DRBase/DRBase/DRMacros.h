@@ -24,6 +24,9 @@ return cs;\
 
 #define share(class) [class sharedInstance]
 
+//字符串判断
+#define DR_NONNULL_STRING(string) (string.length ? string:@"")
+
 //系统版本判断
 #define IS_OS_6_OR_EARLIER         ([[[UIDevice currentDevice] systemVersion] floatValue] < 6.99)
 #define IS_OS_7_OR_EARLIER         ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.99)
@@ -46,8 +49,10 @@ return cs;\
 #define  SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define  SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
+//通用距离
 //边缘距离
-#define DR_MARGIN 15.f
+#define DR_UI_MARGIN 15.f
+
 //字体
 //L1字体，例如section的title大小，标题，按钮
 #define DR_FONT_L1         [UIFont systemFontOfSize:(IS_IPHONE_6_OR_BIGGER?20.f:19.f)]
@@ -63,8 +68,25 @@ return cs;\
 #define DR_FONT_L5         [UIFont systemFontOfSize:13.f]
 
 //颜色
-#define  COLOR_LIGHT [UIColor colorWithRed:37/255.0 green:74/255.0 blue:100/255.0 alpha:1]
-#define  BACK_COLOR_GRAY [UIColor colorWithRed:225/255.0 green:225/255.0 blue:225/255.0 alpha:1]
+#import "UIColor+colorForCode.h"
+
+#define DR_COLOR_CODE(code) [UIColor colorWithCode:code]
+
+// 通用颜色
+#define DR_COLOR_COMMON_BG             DR_COLOR_CODE(@"#f4f4f4")
+#define DR_COLOR_SEPARATOR             DR_COLOR_CODE(@"#e1e1e1")
+#define DR_COLOR_UNEDIT_INPUT_BG       DR_COLOR_CODE(@"#f6f6f6")
+#define DR_COLOR_COMMON_WARM           DR_COLOR_CODE(@"#ff6600")
+#define DR_COLOR_COMMON_COOL           DR_COLOR_CODE(@"#2577e3")
+
+// 通用字体颜色
+#define DR_COLOR_FONT_DARK             DR_COLOR_CODE(@"#333333")
+#define DR_COLOR_FONT_MIDDLE           DR_COLOR_CODE(@"#666666")
+#define DR_COLOR_FONT_LIGHT            DR_COLOR_CODE(@"#999999")
+#define DR_COLOR_FONT_WARM             DR_COLOR_CODE(@"#ff6600")
+#define DR_COLOR_FONT_COOL             DR_COLOR_CODE(@"#2577e3")
+#define DR_COLOR_FONT_PLACEHOLDER      DR_COLOR_CODE(@"#cccccc")
+
 #define  COM_COLOR_BLUE [UIColor colorWithRed:23/255.0 green:152/255.0 blue:185/255.0 alpha:1]
 #define  COLOR_BOOKCOVER_WARM [UIColor colorWithRed:194/255.0 green:117/255.0 blue:32/255.0 alpha:1]
 

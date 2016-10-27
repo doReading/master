@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = DR_COLOR_COMMON_BG;
     
     DRHomeViewController *homeVc = [[DRHomeViewController alloc] init];
     homeVc.title = @"读";

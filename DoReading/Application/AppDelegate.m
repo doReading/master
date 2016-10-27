@@ -29,7 +29,6 @@
     DRTabBarController *rootVc = [[DRTabBarController alloc] init];
     self.window.rootViewController = rootVc;
     [self.window makeKeyAndVisible];
-    rootVc.view.backgroundColor = BACK_COLOR_GRAY;
     return YES;
 }
 

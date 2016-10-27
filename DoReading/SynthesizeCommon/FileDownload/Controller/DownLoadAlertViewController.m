@@ -168,7 +168,7 @@
     self.cancelButton.frame = CGRectMake(10, 10, 50, 28);
     self.cancelButton.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.cancelButton setTitle:@"取消" forState:UIControlStateNormal];//23	152	185
-    [self.cancelButton setTitleColor:COM_COLOR_BLUE forState:UIControlStateNormal];
+    [self.cancelButton setTitleColor:DR_COLOR_FONT_COOL forState:UIControlStateNormal];
     [self.cancelButton addTarget:self action:@selector(cancelButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     //下载提示
@@ -183,7 +183,7 @@
     [self.editButton setTitle:@"编辑" forState:UIControlStateNormal];
     [self.editButton setTitle:@"完成" forState:UIControlStateSelected];
     self.editButton.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.editButton setTitleColor:COM_COLOR_BLUE forState:UIControlStateNormal];
+    [self.editButton setTitleColor:DR_COLOR_FONT_COOL forState:UIControlStateNormal];
     [self.editButton addTarget:self action:@selector(editButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:self.editButton];
     
@@ -194,7 +194,7 @@
     //下载文件名
     self.fileNameText = [[UITextField alloc] initWithFrame:CGRectMake(fileLabel.left + fileLabel.width, fileLabel.top, SCREEN_WIDTH - fileLabel.width - 20, 32)];
     self.fileNameText.backgroundColor = [UIColor clearColor];
-    self.fileNameText.borderStyle = UITextBorderStyleRoundedRect;
+    self.fileNameText.borderStyle = UITextBorderStyleNone;
     self.fileNameText.enabled= NO;
     self.fileNameText.text = [[self.url absoluteString] getTotalName];
     [self.backView addSubview:self.fileNameText];
@@ -228,7 +228,7 @@
     
     [self.downSureButton setTitle:@"下载" forState:UIControlStateNormal];
     self.downSureButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    self.downSureButton.layer.borderColor = COM_COLOR_BLUE.CGColor;
+    self.downSureButton.layer.borderColor = DR_COLOR_FONT_COOL.CGColor;
     self.downSureButton.layer.borderWidth = 0.5;
     self.downSureButton.layer.cornerRadius = 6;
     [self.downSureButton addTarget:self action:@selector(downSureButtonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -244,19 +244,15 @@
 {
     btn.selected = !btn.selected;
     if (btn.selected) {
-        self.fileNameText.backgroundColor = BACK_COLOR_GRAY;
         self.fileNameText.enabled = YES;
-        
-        self.urlText.backgroundColor = BACK_COLOR_GRAY;
+        self.fileNameText.borderStyle = UITextBorderStyleRoundedRect;
         self.urlText.enabled = YES;
-        
         self.downSureButton.enabled = NO;
     }else {
-        self.fileNameText.backgroundColor = [UIColor clearColor];
+        self.fileNameText.borderStyle = UITextBorderStyleNone;
         self.fileNameText.enabled = NO;
         self.fileName = self.fileNameText.text;
         
-        self.urlText.backgroundColor = [UIColor clearColor];
         self.urlText.enabled = NO;
         self.url = [NSURL URLWithString:self.urlText.text];
         

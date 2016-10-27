@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = BACK_COLOR_GRAY;
+    self.view.backgroundColor = DR_COLOR_COMMON_BG;
 }
 
 - (void)viewWillAppear:(BOOL)animated

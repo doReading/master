@@ -6,7 +6,7 @@
 //  Copyright © 2016年 ForHappy. All rights reserved.
 //
 
-@class BookWebInfoModel;
+#import "DRBookSchemeUrlModel.h"
 
 @interface DRBookSchemeUrl : NSObject
 

@@ -66,7 +66,7 @@
         }];
         
         UIButton *refreshBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-        refreshBtn.layer.borderColor = COM_COLOR_BLUE.CGColor;
+        refreshBtn.layer.borderColor = DR_COLOR_FONT_COOL.CGColor;
         refreshBtn.layer.borderWidth = 1.f;
         refreshBtn.layer.cornerRadius = 5.f;
         [refreshBtn setTitle:@"刷新" forState:UIControlStateNormal];

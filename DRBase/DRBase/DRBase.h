@@ -10,7 +10,11 @@
 
 #import "NSString+stringSize.h"
 #import "NSString+grep.h"
+
 #import "NSDictionary+containKeyOrValue.h"
+#import "NSMutableArray+safe.h"
+
+#import "UIColor+colorForCode.h"
 #import "UIView+indicator.h"
 #import "UILabel+DRFactory.h"
 #import "UITextField+DRFactory.h"

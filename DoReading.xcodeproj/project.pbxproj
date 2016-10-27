@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200EA86C1CF6FECB00097D48 /* DRBookSchemeUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8681CF6FECB00097D48 /* DRBookSchemeUrl.m */; };
-		200EA86D1CF6FECB00097D48 /* DRBookSchemeUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA86B1CF6FECB00097D48 /* DRBookSchemeUrlModel.m */; };
 		200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 200EA8701CF6FEF600097D48 /* DRShowTitleView.m */; };
 		2012196E1BDDC00A0052ED19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2012196D1BDDC00A0052ED19 /* main.m */; };
 		201219791BDDC00A0052ED19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201219781BDDC00A0052ED19 /* Assets.xcassets */; };
@@ -24,6 +22,8 @@
 		2027624E1C0856E4004E19CD /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2027624D1C0856E4004E19CD /* BookModel.m */; };
 		2028305C1CF7EF9E00472132 /* DRSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2028305B1CF7EF9E00472132 /* DRSetViewController.m */; };
 		202948281C168089003A02A4 /* DRReadBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 202948271C168089003A02A4 /* DRReadBookViewController.m */; };
+		2040FF451DC1920400F5284F /* DRBookSchemeUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2040FF411DC1920400F5284F /* DRBookSchemeUrl.m */; };
+		2040FF461DC1920400F5284F /* DRBookSchemeUrlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2040FF441DC1920400F5284F /* DRBookSchemeUrlModel.m */; };
 		20484F461C0D3DAB00B1022D /* DRBookDeskTopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20484F451C0D3DAB00B1022D /* DRBookDeskTopViewCell.m */; };
 		20484F4C1C0D4A1F00B1022D /* DRCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 20484F4B1C0D4A1F00B1022D /* DRCollectionLayout.m */; };
 		20988FF51CF81F3000E810B5 /* libDRBase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FF31CF81F3000E810B5 /* libDRBase.a */; };
@@ -35,10 +35,6 @@
 
 /* Begin PBXFileReference section */
 		0F8AD86294916847D3413D33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		200EA8671CF6FECB00097D48 /* DRBookSchemeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSchemeUrl.h; sourceTree = "<group>"; };
-		200EA8681CF6FECB00097D48 /* DRBookSchemeUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSchemeUrl.m; sourceTree = "<group>"; };
-		200EA86A1CF6FECB00097D48 /* DRBookSchemeUrlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSchemeUrlModel.h; sourceTree = "<group>"; };
-		200EA86B1CF6FECB00097D48 /* DRBookSchemeUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSchemeUrlModel.m; sourceTree = "<group>"; };
 		200EA86F1CF6FEF600097D48 /* DRShowTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRShowTitleView.h; sourceTree = "<group>"; };
 		200EA8701CF6FEF600097D48 /* DRShowTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRShowTitleView.m; sourceTree = "<group>"; };
 		201219691BDDC00A0052ED19 /* DoReading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoReading.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +66,10 @@
 		2028305B1CF7EF9E00472132 /* DRSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSetViewController.m; sourceTree = "<group>"; };
 		202948261C168089003A02A4 /* DRReadBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRReadBookViewController.h; sourceTree = "<group>"; };
 		202948271C168089003A02A4 /* DRReadBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRReadBookViewController.m; sourceTree = "<group>"; };
+		2040FF401DC1920400F5284F /* DRBookSchemeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSchemeUrl.h; sourceTree = "<group>"; };
+		2040FF411DC1920400F5284F /* DRBookSchemeUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSchemeUrl.m; sourceTree = "<group>"; };
+		2040FF431DC1920400F5284F /* DRBookSchemeUrlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookSchemeUrlModel.h; sourceTree = "<group>"; };
+		2040FF441DC1920400F5284F /* DRBookSchemeUrlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookSchemeUrlModel.m; sourceTree = "<group>"; };
 		20484F441C0D3DAB00B1022D /* DRBookDeskTopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBookDeskTopViewCell.h; sourceTree = "<group>"; };
 		20484F451C0D3DAB00B1022D /* DRBookDeskTopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBookDeskTopViewCell.m; sourceTree = "<group>"; };
 		20484F4A1C0D4A1F00B1022D /* DRCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRCollectionLayout.h; sourceTree = "<group>"; };
@@ -116,15 +116,6 @@
 				0F8AD86294916847D3413D33 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		200EA8691CF6FECB00097D48 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				200EA86A1CF6FECB00097D48 /* DRBookSchemeUrlModel.h */,
-				200EA86B1CF6FECB00097D48 /* DRBookSchemeUrlModel.m */,
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		200EA86E1CF6FEF600097D48 /* view */ = {
@@ -215,9 +206,6 @@
 		201DA9031C058F5C00453605 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				200EA8691CF6FECB00097D48 /* model */,
-				200EA8671CF6FECB00097D48 /* DRBookSchemeUrl.h */,
-				200EA8681CF6FECB00097D48 /* DRBookSchemeUrl.m */,
 				201DA9041C058F7B00453605 /* DRTabBarController.h */,
 				201DA9051C058F7B00453605 /* DRTabBarController.m */,
 			);
@@ -233,6 +221,7 @@
 				2028305A1CF7EF9E00472132 /* DRSetViewController.h */,
 				2028305B1CF7EF9E00472132 /* DRSetViewController.m */,
 				200EA86E1CF6FEF600097D48 /* view */,
+				2040FF3F1DC1920400F5284F /* dataService */,
 			);
 			name = GetBook;
 			path = DoReading/Modules/GetBook;
@@ -318,6 +307,25 @@
 				20E2F1F91C18258400C763B2 /* DRBookSet.m */,
 			);
 			path = DRReadController;
+			sourceTree = "<group>";
+		};
+		2040FF3F1DC1920400F5284F /* dataService */ = {
+			isa = PBXGroup;
+			children = (
+				2040FF421DC1920400F5284F /* model */,
+				2040FF401DC1920400F5284F /* DRBookSchemeUrl.h */,
+				2040FF411DC1920400F5284F /* DRBookSchemeUrl.m */,
+			);
+			path = dataService;
+			sourceTree = "<group>";
+		};
+		2040FF421DC1920400F5284F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2040FF431DC1920400F5284F /* DRBookSchemeUrlModel.h */,
+				2040FF441DC1920400F5284F /* DRBookSchemeUrlModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		20F148B61C0C00E700EBE4C5 /* Controller */ = {
@@ -464,15 +472,15 @@
 			files = (
 				20F148BD1C0C00E700EBE4C5 /* DRHomeViewController.m in Sources */,
 				202948281C168089003A02A4 /* DRReadBookViewController.m in Sources */,
-				200EA86C1CF6FECB00097D48 /* DRBookSchemeUrl.m in Sources */,
 				20E2F1FA1C18258400C763B2 /* DRBookSet.m in Sources */,
 				201DA91F1C05B26200453605 /* DownLogModel.m in Sources */,
+				2040FF461DC1920400F5284F /* DRBookSchemeUrlModel.m in Sources */,
 				201DA91E1C05B26200453605 /* FileDownloadRequest.m in Sources */,
 				2027624E1C0856E4004E19CD /* BookModel.m in Sources */,
+				2040FF451DC1920400F5284F /* DRBookSchemeUrl.m in Sources */,
 				2028305C1CF7EF9E00472132 /* DRSetViewController.m in Sources */,
 				20484F4C1C0D4A1F00B1022D /* DRCollectionLayout.m in Sources */,
 				2012196E1BDDC00A0052ED19 /* main.m in Sources */,
-				200EA86D1CF6FECB00097D48 /* DRBookSchemeUrlModel.m in Sources */,
 				201219A31BDDD06F0052ED19 /* AppDelegate.m in Sources */,
 				20484F461C0D3DAB00B1022D /* DRBookDeskTopViewCell.m in Sources */,
 				200EA8711CF6FEF600097D48 /* DRShowTitleView.m in Sources */,

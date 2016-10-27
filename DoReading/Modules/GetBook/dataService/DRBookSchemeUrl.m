@@ -11,7 +11,7 @@
 
 @interface DRBookSchemeUrl()
 
-@property (nonatomic, copy) NSString *bookShcemeDir;
+@property (nonatomic, copy) NSString *bookShcemePath;
 @property (nonatomic, strong) DRBookSchemeUrlModel *globalModel;
 
 @end
@@ -33,9 +33,9 @@ IMP_SINGLETON(DRBookSchemeUrl)
 {
     _storeLock = OS_SPINLOCK_INIT;
     
-    self.bookShcemeDir = [self.globalInfoDirectory stringByAppendingString:@"/bookSchemeUrl"];
+    self.bookShcemePath = [self.globalInfoDirectory stringByAppendingPathComponent:@"bookSchemeUrl"];
     
-    NSDictionary *infoDict = [NSDictionary dictionaryWithContentsOfFile:self.bookShcemeDir];
+    NSDictionary *infoDict = [NSDictionary dictionaryWithContentsOfFile:self.bookShcemePath];
     
     if (infoDict.count > 0) {
         NSError *error = nil;
@@ -45,16 +45,16 @@ IMP_SINGLETON(DRBookSchemeUrl)
         }
     }else {
         self.globalModel = [DRBookSchemeUrlModel new];
-        self.globalModel.bookWebList = [NSMutableDictionary dictionary];
+        self.globalModel.bookWebList = [NSMutableArray array];
     }
 }
 
-- (NSMutableDictionary *)bookWebList
+- (NSMutableArray *)bookWebList
 {
     return self.globalModel.bookWebList;
 }
 
-- (void)setBookWebList:(NSMutableDictionary *)bookWebList
+- (void)setBookWebList:(NSMutableArray *)bookWebList
 {
     self.globalModel.bookWebList = bookWebList;
     [self storeGeneralInfo];
@@ -79,7 +79,7 @@ IMP_SINGLETON(DRBookSchemeUrl)
             NSDictionary *dict = [MTLJSONAdapter JSONDictionaryFromModel:self.globalModel error:&error];
             if (!error) {
                 OSSpinLockLock(&_storeLock);
-                [dict writeToURL:[NSURL fileURLWithPath:self.bookShcemeDir] atomically:YES];
+                [dict writeToURL:[NSURL fileURLWithPath:self.bookShcemePath] atomically:YES];
                 OSSpinLockUnlock(&_storeLock);
             }
         }

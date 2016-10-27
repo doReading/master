@@ -17,6 +17,9 @@
 		2028305F1CF7F0D500472132 /* DRBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2028305E1CF7F0D500472132 /* DRBaseTableViewController.m */; };
 		203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DB1C1196C700030046 /* UILabel+DRFactory.m */; };
 		203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 203D85DE1C11990300030046 /* UITextField+DRFactory.m */; };
+		2040FF491DC193FE00F5284F /* NSMutableArray+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2040FF481DC193FE00F5284F /* NSMutableArray+safe.m */; };
+		2040FF4C1DC1990B00F5284F /* UIColor+colorForCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2040FF4B1DC1990B00F5284F /* UIColor+colorForCode.m */; };
+		2040FF4F1DC1A22900F5284F /* UIButton+factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2040FF4E1DC1A22900F5284F /* UIButton+factory.m */; };
 		20988FFA1CF81FA600E810B5 /* libDRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FF91CF81FA600E810B5 /* libDRLibrary.a */; };
 		20988FFC1CF81FA900E810B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20988FFB1CF81FA900E810B5 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,12 @@
 		203D85DB1C1196C700030046 /* UILabel+DRFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DRFactory.m"; sourceTree = "<group>"; };
 		203D85DD1C11990300030046 /* UITextField+DRFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DRFactory.h"; sourceTree = "<group>"; };
 		203D85DE1C11990300030046 /* UITextField+DRFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DRFactory.m"; sourceTree = "<group>"; };
+		2040FF471DC193FE00F5284F /* NSMutableArray+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+safe.h"; sourceTree = "<group>"; };
+		2040FF481DC193FE00F5284F /* NSMutableArray+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+safe.m"; sourceTree = "<group>"; };
+		2040FF4A1DC1990B00F5284F /* UIColor+colorForCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+colorForCode.h"; sourceTree = "<group>"; };
+		2040FF4B1DC1990B00F5284F /* UIColor+colorForCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+colorForCode.m"; sourceTree = "<group>"; };
+		2040FF4D1DC1A22900F5284F /* UIButton+factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+factory.h"; sourceTree = "<group>"; };
+		2040FF4E1DC1A22900F5284F /* UIButton+factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+factory.m"; sourceTree = "<group>"; };
 		20988FF91CF81FA600E810B5 /* libDRLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libDRLibrary.a; path = "../Build/Products/Debug-iphonesimulator/libDRLibrary.a"; sourceTree = "<group>"; };
 		20988FFB1CF81FA900E810B5 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "../Build/Products/Debug-iphonesimulator/Pods.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,12 +131,18 @@
 				201DA92C1C05BC2400453605 /* NSString+grep.m */,
 				202830571CF7DE7800472132 /* NSDictionary+containKeyOrValue.h */,
 				202830581CF7DE7800472132 /* NSDictionary+containKeyOrValue.m */,
+				2040FF471DC193FE00F5284F /* NSMutableArray+safe.h */,
+				2040FF481DC193FE00F5284F /* NSMutableArray+safe.m */,
 				201DA92E1C05BC8A00453605 /* UIView+indicator.h */,
 				201DA92F1C05BC8A00453605 /* UIView+indicator.m */,
 				203D85DA1C1196C700030046 /* UILabel+DRFactory.h */,
 				203D85DB1C1196C700030046 /* UILabel+DRFactory.m */,
 				203D85DD1C11990300030046 /* UITextField+DRFactory.h */,
 				203D85DE1C11990300030046 /* UITextField+DRFactory.m */,
+				2040FF4D1DC1A22900F5284F /* UIButton+factory.h */,
+				2040FF4E1DC1A22900F5284F /* UIButton+factory.m */,
+				2040FF4A1DC1990B00F5284F /* UIColor+colorForCode.h */,
+				2040FF4B1DC1990B00F5284F /* UIColor+colorForCode.m */,
 			);
 			path = CommonLibrary;
 			sourceTree = "<group>";
@@ -196,8 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2040FF4F1DC1A22900F5284F /* UIButton+factory.m in Sources */,
 				201DA8C21C05652500453605 /* DRNavigationController.m in Sources */,
 				201DA92D1C05BC2400453605 /* NSString+grep.m in Sources */,
+				2040FF491DC193FE00F5284F /* NSMutableArray+safe.m in Sources */,
 				201DA9301C05BC8A00453605 /* UIView+indicator.m in Sources */,
 				203D85DC1C1196C700030046 /* UILabel+DRFactory.m in Sources */,
 				2028305F1CF7F0D500472132 /* DRBaseTableViewController.m in Sources */,
@@ -205,6 +222,7 @@
 				200EA8741CF7065C00097D48 /* NSString+stringSize.m in Sources */,
 				203D85DF1C11990300030046 /* UITextField+DRFactory.m in Sources */,
 				202830591CF7DE7800472132 /* NSDictionary+containKeyOrValue.m in Sources */,
+				2040FF4C1DC1990B00F5284F /* UIColor+colorForCode.m in Sources */,
 				201DA8B01C055FCA00453605 /* DRBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

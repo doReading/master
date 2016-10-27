@@ -124,10 +124,10 @@
             make.top.equalTo(_setView).offset(5);
         }];
         
-        _progressField = [UITextField createWithfont:[UIFont systemFontOfSize:15.f] color:nil];
+        _progressField = [UITextField createWithfont:DR_FONT_L3 color:nil];
         _progressField.delegate = self;
         _progressField.keyboardType = UIKeyboardTypeDecimalPad;
-        _progressField.backgroundColor = BACK_COLOR_GRAY;
+        _progressField.borderStyle = UITextBorderStyleRoundedRect;
         _progressField.placeholder = @"0 ~ 100";
         [_setView addSubview:_progressField];
         [_progressField mas_makeConstraints:^(MASConstraintMaker *make) {

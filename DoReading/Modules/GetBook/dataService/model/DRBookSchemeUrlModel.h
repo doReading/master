@@ -12,7 +12,7 @@
 //全局变量
 @interface DRBookSchemeUrlModel : MTLModel<MTLJSONSerializing>
 
-@property (nonatomic, strong) NSMutableDictionary *bookWebList;
+@property (nonatomic, strong) NSMutableArray *bookWebList;
 
 @property (nonatomic, strong) BookWebInfoModel *defaultBookWeb;
 
@@ -23,12 +23,6 @@
 @property (nonatomic, copy) NSString *webName;
 
 @property (nonatomic, copy) NSString *baseUrl;
-
-@property (nonatomic, copy) NSString *param1;
-
-@property (nonatomic, copy) NSString *variableParam;
-
-@property (nonatomic, copy) NSString *param2;
 
 @end
 
